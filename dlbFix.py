@@ -1,93 +1,54 @@
 import os
-import subprocess
-import shutil
 
-# --- File paths ---
-header_file = "src/components/Header.tsx"
-footer_file = "src/components/Footer.tsx"
-vite_config = "vite.config.ts"
+APP_FILE = "src/App.tsx"
 
-# --- Patch Header.tsx ---
-if os.path.exists(header_file):
-    backup = header_file + ".bak"
-    shutil.copyfile(header_file, backup)
-    with open(header_file, "w", encoding="utf-8") as f:
-        f.write("""export default function Header() {
-  return (
-    <header className="header">
-      <img
-        src={`${import.meta.env.BASE_URL}Big.png`}
-        alt="Biblical Heritage Logo"
-        className="logo"
-      />
-    </header>
-  );
-}
-""")
-    print(f"✅ Patched {header_file}")
-else:
-    print(f"⚠️ {header_file} not found")
+def patch_app_file():
+    if not os.path.exists(APP_FILE):
+        print(f"❌ {APP_FILE} not found")
+        return
 
-# --- Patch Footer.tsx ---
-if os.path.exists(footer_file):
-    backup = footer_file + ".bak"
-    shutil.copyfile(footer_file, backup)
-    with open(footer_file, "w", encoding="utf-8") as f:
-        f.write("""export default function Footer() {
-  return (
-    <footer className="footer">
-      <img
-        src={`${import.meta.env.BASE_URL}Small.png`}
-        alt="Biblical Heritage Logo Small"
-        className="logo"
-      />
-      <p>© 2025 Biblical Heritage. All rights reserved. | email: OurBiblicalHeritage@gmail.com</p>
-    </footer>
-  );
-}
-""")
-    print(f"✅ Patched {footer_file}")
-else:
-    print(f"⚠️ {footer_file} not found")
+    with open(APP_FILE, "r", encoding="utf-8") as f:
+        content = f.read()
 
-# --- Patch vite.config.ts ---
-if os.path.exists(vite_config):
-    backup = vite_config + ".bak"
-    shutil.copyfile(vite_config, backup)
-    with open(vite_config, "w", encoding="utf-8") as f:
-        f.write("""import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
+    # Remove any old imports of Big.png or Small.png
+    for logo in ["Big.png", "Small.png"]:
+        if f"import" in content and logo in content:
+            print(f"🔄 Removing old import of {logo}")
+            content = "\n".join(
+                line for line in content.splitlines()
+                if logo not in line
+            )
 
-export default defineConfig({
-  plugins: [react()],
-  base: "/AppWebsite/",  // 👈 ensures assets load correctly on GitHub Pages
-});
-""")
-    print(f"✅ Patched {vite_config}")
-else:
-    print(f"⚠️ {vite_config} not found")
+    # Replace old <img src="./assets/..."> with public/ references
+    content = content.replace(
+        'src="./assets/Big.png"',
+        'src={`${import.meta.env.BASE_URL}Big.png`}'
+    ).replace(
+        'src="./assets/Small.png"',
+        'src={`${import.meta.env.BASE_URL}Small.png`}'
+    )
 
-# --- Clean dist/ ---
-if os.path.exists("dist"):
-    shutil.rmtree("dist")
-    print("🧹 Removed dist/")
+    # Also handle cases where src="Big.png" was written directly
+    content = content.replace(
+        'src="Big.png"',
+        'src={`${import.meta.env.BASE_URL}Big.png`}'
+    ).replace(
+        'src="Small.png"',
+        'src={`${import.meta.env.BASE_URL}Small.png`}'
+    )
 
-# --- Build ---
-print("⚡ Running build...")
-try:
-    subprocess.run("npm run build", shell=True, check=True)
-    print("🎉 Build completed successfully.")
-except subprocess.CalledProcessError:
-    print("❌ Build failed.")
-    exit(1)
+    with open(APP_FILE, "w", encoding="utf-8") as f:
+        f.write(content)
 
-# --- Git commit & push ---
-print("📦 Committing and pushing to GitHub...")
-try:
-    subprocess.run("git add .", shell=True, check=True)
-    subprocess.run('git commit -m "Fix logos and vite base"', shell=True, check=False)
-    subprocess.run("git push origin main", shell=True, check=True)
-    subprocess.run("git push origin gh-pages", shell=True, check=True)
-    print("🚀 Deploy complete. Site should update shortly.")
-except subprocess.CalledProcessError:
-    print("⚠️ Git push failed. Please check your repo status.")
+    print(f"✅ Patched {APP_FILE} to use public/Big.png and public/Small.png")
+
+
+def main():
+    patch_app_file()
+    print("🎉 Done. Now run:")
+    print("   rd /s /q dist   # (Windows PowerShell)")
+    print("   npm run build")
+    print("   git add . && git commit -m 'Fix logo paths' && git push origin main")
+
+if __name__ == "__main__":
+    main()
