@@ -4,7 +4,7 @@ export default function Footer() {
       <img
         src={`${import.meta.env.BASE_URL}Small.png`}
         alt="Biblical Heritage Logo Small"
-        className="footer-logo"
+        className="logo"
       />
       <p>© 2025 Biblical Heritage. All rights reserved. | email: OurBiblicalHeritage@gmail.com</p>
     </footer>

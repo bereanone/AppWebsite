@@ -27,7 +27,7 @@ header_content = """export default function Header() {
       <img
         src={`${import.meta.env.BASE_URL}Big.png`}
         alt="Biblical Heritage Logo"
-        className="header-logo"
+        className="logo"
       />
     </header>
   );
@@ -40,7 +40,7 @@ footer_content = """export default function Footer() {
       <img
         src={`${import.meta.env.BASE_URL}Small.png`}
         alt="Biblical Heritage Logo Small"
-        className="footer-logo"
+        className="logo"
       />
       <p>© 2025 Biblical Heritage. All rights reserved. | email: OurBiblicalHeritage@gmail.com</p>
     </footer>
@@ -48,11 +48,11 @@ footer_content = """export default function Footer() {
 }
 """
 
-print("📂 Forcing Header → Big.png, Footer → Small.png...")
+print("📂 Forcing Header → Big.png (via BASE_URL), Footer → Small.png (via BASE_URL)...")
 patch_file(header_file, header_content)
 patch_file(footer_file, footer_content)
 
-# --- Clean build folders ---
+# --- Clean build folder ---
 print("🧹 Cleaning dist folder...")
 if os.path.exists("dist"):
     shutil.rmtree("dist")
@@ -64,18 +64,16 @@ try:
     subprocess.run("npm run build", shell=True, check=True)
     print("🎉 Build completed successfully.")
 except subprocess.CalledProcessError:
-    print("❌ Build failed — aborting deploy.")
+    print("❌ Build failed. Exiting.")
     exit(1)
 
-# --- Git Commit & Deploy ---
+# --- Git commit and push ---
 print("📦 Committing and pushing to gh-pages...")
 try:
-    subprocess.run("git add -A", shell=True, check=True)
-    subprocess.run('git commit -m "Fix: force Header→Big.png, Footer→Small.png, rebuild"', shell=True)
+    subprocess.run("git add .", shell=True, check=True)
+    subprocess.run('git commit -m "Fix: Header→Big.png, Footer→Small.png via BASE_URL"', shell=True, check=False)
     subprocess.run("git push origin main", shell=True, check=True)
-
-    # deploy branch
-    subprocess.run("git subtree push --prefix dist origin gh-pages", shell=True, check=True)
+    subprocess.run("git push origin gh-pages", shell=True, check=True)
     print("🚀 Deploy complete. Site should update shortly.")
 except subprocess.CalledProcessError:
-    print("❌ Git push/deploy failed. Check your git status.")
+    print("⚠️ Git push failed. Please check your repo status.")
