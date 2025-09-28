@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biblical Heritage</title>
+
+    <!-- favicon lives at repo root (per your tree) -->
+    <link rel="icon" type="image/svg+xml" href="vite.svg" />
+
+    <style>
+      :root { --sepia-900: #e8d8c3; }
+
+      html, body {
+        background-color: var(--sepia-900) !important;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        color: #000;
+      }
+
+      .top-logo {display: block;
+        margin: 20px auto;; width: 200px; height: auto;}
+
+      #scripture {
+        margin: 20px auto;
+        max-width: 700px;
+        text-align: center;
+      }
+      #scripture .scripture { font-style: italic; margin-bottom: 5px; }
+      #scripture .reference { font-style: normal; margin-top: 0; }
+
+      /* === Three-column layout === */
+      main.three-columns {
+        display: grid;
+        grid-template-columns: 33% 34% 33%;
+        gap: 20px;
+        max-width: 1200px;
+        margin: 20px auto 40px auto;
+        line-height: 1.6;
+        text-align: left;
+        align-items: start;
+      }
+      main.three-columns section { padding: 0 15px; }
+      main.three-columns h2 {
+        text-align: center;
+        font-size: 1.4rem;
+        font-weight: bold;
+        margin: 0 0 0.5em 0;
+      }
+      main.three-columns p,
+      main.three-columns ul {
+        text-align: left;
+        margin: 0 0 1em;
+      }
+
+      footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin: 40px auto;
+        max-width: 1200px;
+      }
+      .bottom-logo {
+        width: 40px !important;
+        height: auto !important;
+        margin: 0;
+      }
+    
+.top-logo {
+  width: 320px;
+  max-width: 90vw;
+  height: auto;
+}
+.bottom-logo {
+  width: 40px;
+  height: auto;
+}
+
+</style>
+  </head>
+
+  <body>
+    <header>
+      <!-- Top Logo (in public/) -->
+      <img src="/Logo2.png" alt="Biblical Heritage Logo" class="top-logo" />
+    </header>
+
+    <section id="scripture">
+      <p class="scripture">“But sanctify the Lord God in your hearts: and be ready always to give an answer to every man that asketh you a reason of the hope that is in you with meekness and fear.”</p>
+      <p class="reference">1 Peter 3:15 (KJV)</p>
+    </section>
+
+    <main class="three-columns">
+      <!-- About -->
+      <section id="about">
+        <h2>About</h2>
+        <p>
+          Our mission is to make the Word of God accessible with clarity and reverence.
+          We combine scripture, history, and commentary into a format that is beautiful,
+          functional, and faithful to the original text.
+        </p>
+      </section>
+
+      <!-- Features -->
+      <section id="features">
+        <h2>Features</h2>
+        <ul>
+          <li>✓ Strong’s numbers with definitions.</li>
+          <li>✓ Day, Sepia, and Night themes.</li>
+          <li>✓ Search and navigation tools.</li>
+          <li>✓ More features planned for future versions.</li>
+        </ul>
+      </section>
+
+      <!-- Call to Action -->
+      <section id="cta">
+        <h2>Call to Action</h2>
+        <p>
+          Join us in preserving and sharing these resources.
+          Your support helps ensure that Biblical truth remains accessible to all.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <!-- Bottom logo (in public/) -->
+      <img src="/assets/Logo2Small-Bf7QGfm9.png" alt="Biblical Heritage Logo Small" class="bottom-logo" />
+      <p>
+        © 2025 Biblical Heritage. All rights reserved. |
+        email: <a href="mailto:OurBiblicalHeritage@gmail.com">OurBiblicalHeritage@gmail.com</a>
+      </p>
+    </footer>
+  </body>
+</html>
