@@ -1,0 +1,90 @@
+:root {
+  --sepia-900: #e8d8c3;
+}
+
+html, body {
+  background-color: var(--sepia-900) !important;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #000;
+}
+
+.top-logo {
+  width: 240px !important;
+  height: auto !important;
+  display: block;
+  margin: 20px auto;
+}
+
+#scripture {
+  margin: 20px auto 15px auto;
+  max-width: 700px;
+  text-align: center;
+}
+#scripture .scripture {
+  font-style: italic;
+  margin-bottom: 5px;
+}
+#scripture .reference {
+  font-style: normal;
+  margin-top: 0;
+}
+
+/* === Uniform Three-Column Layout === */
+main.three-columns {
+  display: grid;
+  grid-template-columns: 25% 50% 25%;  /* narrower About & CTA, wider Features */
+  gap: 20px;
+  max-width: 1200px;
+  margin: 20px auto;
+  line-height: 1.5;
+  text-align: left;
+  align-items: start;  /* line up at the top */
+}
+
+main.three-columns section {
+  background: transparent;   /* keep clean background, could add border if needed */
+  padding: 0 15px;
+}
+
+main.three-columns h2 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+main.three-columns p,
+main.three-columns ul {
+  margin: 0 0 1em;
+}
+
+main.three-columns ul {
+  padding-left: 20px;
+}
+
+main.three-columns li {
+  margin-bottom: 0.5em;
+}
+
+/* Responsive: stack vertically on small screens */
+@media (max-width: 900px) {
+  main.three-columns {
+    flex-direction: column;
+  }
+}
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.bottom-logo {
+  width: 40px !important;
+  height: auto !important;
+  margin: 0;
+}
