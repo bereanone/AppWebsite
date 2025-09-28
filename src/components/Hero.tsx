@@ -2,7 +2,7 @@ export default function Hero() {
   return (
     <section className="text-center mb-12">
       <img
-        src={`${import.meta.env.BASE_URL}Big.png`}
+        src={${import.meta.env.BASE_URL}Big.png}
         alt="Biblical Heritage Logo"
         width="400"
       />
