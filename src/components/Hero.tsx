@@ -2,7 +2,7 @@ export default function Hero() {
   return (
     <section className="text-center mb-12">
       <img
-        src="/Logo2.png"
+        src="Logo2.png"
         alt="Biblical Heritage Logo"
         className="mx-auto mb-6 w-48 h-auto"
       />
