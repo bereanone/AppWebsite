@@ -172,7 +172,7 @@ main.three-columns h2 {
   <body>
     <header>
       <!-- Top Logo -->
-      <img src="%BASE_URL%Logo2.png" alt="Biblical Heritage Logo" class="top-logo" class="top-logo" class="top-logo" class="top-logo" class="top-logo" class="top-logo" class="top-logo" />
+      <img src="/Logo2.png" alt="Biblical Heritage Logo" class="top-logo" class="top-logo" class="top-logo" class="top-logo" class="top-logo" class="top-logo" class="top-logo" />
     </header>
 
 <section id="scripture">
@@ -225,8 +225,8 @@ main.three-columns h2 {
 
     <footer>
       <!-- Bottom logo untouched -->
-      <img src="%BASE_URL%Logo2Small.png" alt="Biblical Heritage Logo Small" class="bottom-logo" class="bottom-logo" class="bottom-logo" class="bottom-logo" class="bottom-logo" class="bottom-logo" class="bottom-logo" />
-      <p>© 2025 Biblical Heritage. All rights reserved. | email: OurBiblicalHeritage@gmail.com</p>
+      <img src="Logo2Small.png" alt="Biblical Heritage Logo Small" class="bottom-logo" class="bottom-logo" class="bottom-logo" class="bottom-logo" class="bottom-logo" class="bottom-logo" class="bottom-logo" />
+      <p>© 2025 Biblical Heritage. All rights reserved. | email: Info@website.org</p>
 
     </footer>
   </body>

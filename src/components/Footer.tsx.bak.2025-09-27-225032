@@ -3,7 +3,7 @@ export default function Footer() {
     <footer className="bg-[#1a0e0e] text-[#fdf6e3] text-center py-6 mt-12 border-t border-[#fdf6e3]/20">
       <div className="flex justify-center items-center space-x-2">
         <img
-          src={`${{import.meta.env.BASE_URL}}Logo2Small.png`}
+          src="Logo2Small.png"
           alt="Biblical Heritage Logo"
           className="h-4 w-auto object-contain align-middle"
         />

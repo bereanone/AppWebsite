@@ -5,7 +5,7 @@ export default function Header() {
         {/* Logo + Title */}
         <div className="flex items-center space-x-3">
           <img
-            src={`${{import.meta.env.BASE_URL}}Logo2Small.png`}
+            src="Logo2Small.png"
             alt="Biblical Heritage Logo"
             className="block w-[32px] h-[32px] object-contain shrink-0"
           />
