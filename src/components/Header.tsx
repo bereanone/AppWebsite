@@ -2,10 +2,11 @@ export default function Header() {
   return (
     <header className="header">
       <img
-        src={`${import.meta.env.BASE_URL}Big.png`}
+        src="/Big.png"
         alt="Biblical Heritage Logo Big"
         className="logo"
       />
+
     </header>
   );
 }
