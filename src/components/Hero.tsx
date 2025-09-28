@@ -1,12 +1,10 @@
-import BigLogo from '../assets/Big.png'
-
 export default function Hero() {
   return (
     <section className="text-center mb-12">
       <img
-        src={BigLogo}
-        alt="Biblical Heritage Logo"
-        width="400"
+        src={`${import.meta.env.BASE_URL}Big.png`}
+        alt="Biblical Heritage Logo Big"
+        className="logo"
       />
       <h1 className="text-4xl font-bold mb-4">Biblical Heritage</h1>
       <p className="italic max-w-2xl mx-auto">
