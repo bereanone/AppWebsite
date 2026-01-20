@@ -18,8 +18,14 @@
         color: #000;
       }
 
-      .top-logo {display: block;
-        margin: 20px auto;; width: 200px; height: auto;}
+      .top-logo {
+        display: block;
+        margin: 20px auto;
+        width: 260px;
+        max-width: 85vw;
+        height: auto;
+        background: transparent;
+      }
 
       #scripture {
         margin: 20px auto;
@@ -52,6 +58,19 @@
         text-align: left;
         margin: 0 0 1em;
       }
+      .nav-btn {
+        font-size: 1.15rem;
+        padding: 14px 28px;
+        background: #6b4a2b;
+        color: #f7eddc;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+      .nav-btn:hover {
+        background: #4d3620;
+      }
 
       footer {
         display: flex;
@@ -83,7 +102,7 @@
   <body>
     <header>
       <!-- Top Logo (in public/) -->
-      <img src="/Big.png" alt="Biblical Heritage Logo" class="top-logo" />
+      <img src="public/Big.png" alt="Biblical Heritage Logo" class="top-logo" />
     </header>
 
     <section id="scripture">
@@ -96,9 +115,14 @@
       <section id="about">
         <h2>About</h2>
         <p>
-          Our mission is to make the Word of God accessible with clarity and reverence.
-          We combine scripture, history, and commentary into a format that is beautiful,
-          functional, and faithful to the original text.
+          Biblical Heritage is building a carefully curated KJV Study Bible designed for clarity,
+          accuracy, and reverence for the inspired text. Our mission is to preserve
+          Scripture-centered resources in digital form while remaining faithful to the historic
+          Word of God.
+        </p>
+        <p>
+          The KJV Study Bible is currently in active development. Additional historic volumes,
+          reference works, and study resources are planned.
         </p>
       </section>
 
@@ -110,6 +134,7 @@
           <li>✓ Day, Sepia, and Night themes.</li>
           <li>✓ Search and navigation tools.</li>
           <li>✓ More features planned for future versions.</li>
+          <li>✓ KJV Study Bible currently in development.</li>
         </ul>
       </section>
 
@@ -117,11 +142,17 @@
       <section id="cta">
         <h2>Call to Action</h2>
         <p>
-          Join us in preserving and sharing these resources.
-          Your support helps ensure that Biblical truth remains accessible to all.
+          The Biblical Heritage KJV Study Bible is currently in active development.
+          Alongside it, additional historic volumes, reference works, and study resources
+          are planned. Your support helps preserve and share these Scripture-centered
+          materials for generations to come.
         </p>
       </section>
     </main>
+    <div style="text-align:center; margin:40px 0;">
+      <a href="brhc.html"><button class="nav-btn">Bible Readings for the Home Circle</button></a>
+      <a href="privacy.html" style="margin-left:20px;"><button class="nav-btn">Privacy Policy</button></a>
+    </div>
 
     <footer>
       <!-- Bottom logo (in public/) -->
