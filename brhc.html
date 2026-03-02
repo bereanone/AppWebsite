@@ -3,109 +3,187 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bible Readings for the Home Circle</title>
+    <title>Bible Readings 1914 | BiblicalHeritage.net</title>
+    <meta
+      name="description"
+      content="Bible Readings 1914 app page for Biblical Heritage, including App Store availability and current Android testing status."
+    />
+    <link rel="canonical" href="https://biblicalheritage.net/brhc.html" />
+    <script>
+      (function () {
+        var oldHosts = ["biblical-heritage.com", "www.biblical-heritage.com"];
+        if (oldHosts.indexOf(window.location.hostname) !== -1) {
+          var target =
+            "https://biblicalheritage.net" +
+            window.location.pathname +
+            window.location.search +
+            window.location.hash;
+          window.location.replace(target);
+        }
+      })();
+    </script>
     <style>
-      :root { --sepia-900: #e8d8c3; }
-      html, body {
-        background-color: var(--sepia-900);
+      :root {
+        --paper: #e8d8c3;
+        --ink: #1d1712;
+        --accent: #6b4a2d;
+        --accent-dark: #5a3e26;
+      }
+
+      html,
+      body {
+        background-color: var(--paper);
         margin: 0;
-        font-family: Arial, sans-serif;
-        color: #000;
+        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+        color: var(--ink);
       }
-      header {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 12px;
-        margin: 20px 0 10px;
-        background: transparent;
+
+      .domain-banner {
+        text-align: center;
+        padding: 10px 16px;
+        font-size: 0.95rem;
+        background: #d8c5ac;
+        border-bottom: 1px solid #bca78e;
       }
+
       .top-logo {
         display: block;
         margin: 20px auto 10px;
         width: 240px;
         max-width: 90vw;
         height: auto;
-        background: transparent;
       }
-      .back-btn {
-        border: 0;
-        background: transparent;
-        padding: 0;
-        cursor: pointer;
-      }
-      .back-icon {
-        width: 80px;
-        height: auto;
-      }
+
       main {
-        max-width: 900px;
+        max-width: 940px;
         margin: 10px auto 40px;
         padding: 0 20px;
-        line-height: 1.6;
-        text-align: center;
+        line-height: 1.65;
       }
-      h1 { margin: 10px 0 16px; }
-      p { text-align: left; }
+
+      h1 {
+        text-align: center;
+        margin: 10px 0 16px;
+      }
+
+      h2 {
+        margin: 18px 0 10px;
+      }
+
+      p {
+        margin: 0 0 14px;
+      }
+
+      ul {
+        margin-top: 0;
+      }
+
       .cover {
         display: block;
         margin: 14px auto 6px;
         width: 100%;
-        max-width: 120px;
+        max-width: 130px;
         height: auto;
       }
-      .emblem {
-        display: block;
-        margin: 14px auto 0;
-        width: 100%;
-        max-width: 140px;
-        height: auto;
-      }
+
       .caption {
         font-size: 0.95rem;
         text-align: center;
         margin: 0 0 18px;
       }
-      h2 { margin: 18px 0 10px; }
-      .back-btn img,
-      header img {
-        background: transparent;
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: center;
+        margin-top: 24px;
       }
-      .back-text-btn {
-        background-color: #6b4a2d;
+
+      .btn {
+        background-color: var(--accent);
         color: #fff;
         border: none;
         border-radius: 10px;
         padding: 10px 22px;
         font-size: 1rem;
         cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        font-weight: 700;
       }
 
-      .back-text-btn:hover {
-        background-color: #5a3e26;
+      .btn:hover {
+        background-color: var(--accent-dark);
       }
 
-      .footer-back {
-        margin-top: 28px;
-        text-align: center;
+      .status {
+        background: #f3e8d6;
+        border: 1px solid #d2bea2;
+        border-radius: 8px;
+        padding: 12px;
       }
     </style>
   </head>
   <body>
+    <div class="domain-banner">
+      Canonical home: <strong>BiblicalHeritage.net</strong>
+    </div>
+
     <header>
       <img src="public/Big.png" alt="Biblical Heritage Logo" class="top-logo" />
     </header>
+
     <main>
-      <h1>Bible Readings for the Home Circle</h1>
-      <p>The original 1914 volume, Bible Readings for the Home Circle, presents thousands of carefully organized Bible questions with Scripture-based answers arranged by topic. It has long served as a trusted resource for home study, evangelism, and doctrinal clarity.</p>
-      <img src="public/brhc_1914_cover.jpg" alt="Bible Readings for the Home Circle 1914 cover" class="cover" />
+      <h1>Bible Readings 1914</h1>
+      <p>
+        The original 1914 volume, Bible Readings for the Home Circle, presents
+        thousands of carefully organized Bible questions with Scripture-based
+        answers arranged by topic.
+      </p>
+
+      <img
+        src="public/brhc_1914_cover.jpg"
+        alt="Bible Readings for the Home Circle 1914 cover"
+        class="cover"
+      />
       <div class="caption">Historic printed volume, 1914.</div>
+
       <h2>Digital Edition</h2>
-      <p>This digital edition is a faithful restoration of the original work, offering searchable, indexed, topic-linked questions with Scripture-first answers. It is available offline, part of the broader Biblical Heritage project, and preserves historic Protestant and Adventist study works.</p>
-      <img src="public/image.png" alt="Biblical Heritage emblem" class="emblem" />
-      <p>This restoration bridges the historic print volume to a modern digital form, preserving it for future generations.</p>
-      <div class="footer-back">
-        <button class="back-text-btn" onclick="history.back()">← Back</button>
+      <p>
+        This digital edition restores the historic work in a searchable,
+        topic-linked format with chapter navigation, question navigation, copy
+        tools, and mobile reading support.
+      </p>
+
+      <div class="status">
+        <strong>Release Progress (March 1, 2026)</strong>
+        <ul>
+          <li>
+            iOS: Live on the App Store -
+            <a href="https://apps.apple.com/us/app/bible-readings-1914/id6757504303"
+              >Bible Readings 1914</a
+            >.
+          </li>
+          <li>
+            Android: Internal testing is now live through Google Play.
+          </li>
+        </ul>
+      </div>
+
+      <h2>Current Feature Focus</h2>
+      <ul>
+        <li>Question-by-question navigation within each chapter.</li>
+        <li>Chapter copy and current-question copy tools.</li>
+        <li>Mobile-friendly reading and navigation controls.</li>
+        <li>Cross-platform rollout across iPhone and Android.</li>
+      </ul>
+
+      <div class="actions">
+        <a class="btn" href="https://apps.apple.com/us/app/bible-readings-1914/id6757504303">Open on App Store</a>
+        <a class="btn" href="index.html">Back to Home</a>
+        <a class="btn" href="https://biblicalheritage.net">BiblicalHeritage.net</a>
+        <a class="btn" href="privacy.html">Privacy Policy</a>
       </div>
     </main>
   </body>
