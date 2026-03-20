@@ -6,7 +6,7 @@
     <title>Biblical Heritage | BiblicalHeritage.net</title>
     <meta
       name="description"
-      content="Biblical Heritage app hub for Bible Readings 1914 and Biblical Heritage #StudyBible, with current links, features, and study-sharing tools."
+      content="Biblical Heritage app hub for Bible Readings 1914 and Biblical Heritage #StudyBible, with current links, desktop downloads, and study-sharing tools."
     />
     <link rel="canonical" href="https://biblicalheritage.net/" />
     <script>
@@ -22,239 +22,93 @@
         }
       })();
     </script>
-
     <style>
-      :root {
-        --paper: #e8d8c3;
-        --ink: #1d1712;
-        --accent: #6b4a2b;
-        --accent-dark: #4d3620;
-      }
-
-      html,
-      body {
-        background-color: var(--paper) !important;
-        margin: 0;
-        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-        color: var(--ink);
-      }
-
-      .top-logo {
-        display: block;
-        margin: 20px auto;
-        width: 320px;
-        max-width: 90vw;
-        height: auto;
-      }
-
-      #scripture {
-        margin: 20px auto;
-        max-width: 780px;
-        text-align: center;
-      }
-
-      #scripture .scripture {
-        font-style: italic;
-        margin-bottom: 5px;
-      }
-
-      #scripture .reference {
-        margin-top: 0;
-      }
-
-      main.three-columns {
-        display: grid;
-        grid-template-columns: 33% 34% 33%;
-        gap: 20px;
-        max-width: 1200px;
-        margin: 20px auto 32px;
-        line-height: 1.6;
-        text-align: left;
-        align-items: start;
-      }
-
-      main.three-columns section {
-        padding: 0 15px;
-      }
-
-      main.three-columns h2 {
-        text-align: center;
-        font-size: 1.35rem;
-        font-weight: bold;
-        margin: 0 0 0.6em;
-      }
-
-      main.three-columns p,
-      main.three-columns ul {
-        margin: 0 0 1em;
-      }
-
-      main.three-columns li {
-        margin-bottom: 8px;
-      }
-
-      .tag-example {
-        display: block;
-        background: #f3e8d6;
-        border: 1px solid #d2bea2;
-        border-radius: 8px;
-        padding: 10px;
-        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-        font-size: 0.95rem;
-        margin-top: 10px;
-        line-height: 1.5;
-      }
-
-      .muted {
-        font-size: 0.92rem;
-        color: #493b2f;
-      }
-
-      .link-row {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 14px;
-        margin: 30px auto 18px;
-      }
-
-      .nav-btn {
-        font-size: 1.05rem;
-        padding: 12px 24px;
-        background: var(--accent);
-        color: #f7eddc;
-        border: none;
-        border-radius: 10px;
-        cursor: pointer;
-        font-weight: 700;
-        text-decoration: none;
-        display: inline-block;
-      }
-
-      .nav-btn:hover {
-        background: var(--accent-dark);
-      }
-
-      footer {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        margin: 28px auto 42px;
-        max-width: 1200px;
-        text-align: center;
-        padding: 0 16px;
-      }
-
-      .bottom-logo {
-        width: 40px;
-        height: auto;
-      }
-
-      a {
-        color: #3c2b1c;
-      }
-
+      :root { --paper:#e8d8c3; --ink:#1d1712; --accent:#6b4a2b; --accent-dark:#4d3620; --panel:#f1e4d1; --line:#ceb290; }
+      html, body { background-color: var(--paper)!important; margin:0; font-family:"Palatino Linotype","Book Antiqua",Palatino,serif; color:var(--ink); }
+      a { color:#3c2b1c; }
+      .top-logo { display:block; margin:0 auto 8px; width:210px; max-width:70vw; height:auto; }
+      #scripture { margin:8px auto 0; max-width:420px; text-align:center; padding:0 12px; }
+      #scripture .scripture { font-style:italic; margin-bottom:5px; }
+      #scripture .reference { margin-top:0; }
+      .hero-grid { display:grid; grid-template-columns:1fr auto 1fr; gap:22px; align-items:start; max-width:1180px; margin:18px auto 22px; padding:0 22px; }
+      .app-card, .mission-card, .summary-strip, .tester-note { background:var(--panel); border:1px solid var(--line); border-radius:16px; }
+      .app-card { padding:24px 20px; text-align:center; }
+      .app-card h2 { margin:0 0 10px; font-size:1.8rem; }
+      .app-card p { margin:0 0 14px; line-height:1.55; }
+      .app-actions { display:flex; flex-direction:column; gap:10px; }
+      .mission-card { padding:0; text-align:center; background:transparent; border:none; }
+      .launch-btn, .nav-btn { font-size:1.05rem; padding:12px 22px; background:var(--accent); color:#f7eddc; border:none; border-radius:12px; cursor:pointer; font-weight:700; text-decoration:none; display:inline-block; }
+      .launch-btn:hover, .nav-btn:hover { background:var(--accent-dark); }
+      .summary-strip { max-width:1180px; margin:0 auto 18px; padding:18px 22px; }
+      .summary-grid { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+      .summary-grid h3 { margin:0 0 8px; font-size:1.2rem; }
+      .summary-grid p, .summary-grid ul { margin:0; line-height:1.55; }
+      .summary-grid ul { padding-left:20px; }
+      .summary-grid li { margin-bottom:8px; }
+      .tester-note { max-width:1180px; margin:0 auto 20px; padding:14px 18px; }
+      .tester-note p { margin:8px 0 0; }
+      .link-row { display:flex; flex-wrap:wrap; justify-content:center; gap:14px; margin:24px auto 18px; max-width:1180px; padding:0 16px; }
+      footer { display:flex; justify-content:center; align-items:center; gap:10px; margin:24px auto 42px; max-width:1200px; text-align:center; padding:0 16px; }
+      .bottom-logo { width:40px; height:auto; }
       @media (max-width: 900px) {
-        main.three-columns {
-          grid-template-columns: 1fr;
-          gap: 8px;
-        }
+        .hero-grid, .summary-grid { grid-template-columns:1fr; }
+        .top-logo { width:180px; }
       }
     </style>
   </head>
-
   <body>
-    <header>
-      <img src="public/Big.png" alt="Biblical Heritage Logo" class="top-logo" />
-    </header>
-
-    <section id="scripture">
-      <p class="scripture">
-        "But sanctify the Lord God in your hearts: and be ready always to give
-        an answer to every man that asketh you a reason of the hope that is in
-        you with meekness and fear."
-      </p>
-      <p class="reference">1 Peter 3:15 (KJV)</p>
+    <section class="hero-grid">
+      <section class="app-card">
+        <h2>Bible Readings 1914</h2>
+        <p>The classic question-and-answer Bible guide for focused topic study, quick reference, and public-domain reading on mobile and desktop.</p>
+        <div class="app-actions">
+          <a href="brhc.html" class="launch-btn">Open BRHC Progress</a>
+          <a href="https://apps.apple.com/us/app/bible-readings-1914/id6757504303" class="nav-btn">BRHC on App Store</a>
+        </div>
+      </section>
+      <section class="mission-card">
+        <img src="Big.png" alt="Biblical Heritage Logo" class="top-logo" />
+        <section id="scripture">
+          <p class="scripture">"But sanctify the Lord God in your hearts: and be ready always to give an answer to every man that asketh you a reason of the hope that is in you with meekness and fear."</p>
+          <p class="reference">1 Peter 3:15 (KJV)</p>
+        </section>
+      </section>
+      <section class="app-card">
+        <h2>#StudyBible</h2>
+        <p>The larger study environment for notes, highlights, verse chains, commentary workflows, source tools, and collaborative Bible study.</p>
+        <div class="app-actions">
+          <a href="studybible.html" class="launch-btn">Open #StudyBible Progress</a>
+          <a href="downloads.html" class="nav-btn">Desktop Downloads</a>
+        </div>
+      </section>
     </section>
-
-    <main class="three-columns">
-      <section id="about">
-        <h2>About</h2>
-        <p>
-          Biblical Heritage now maintains two connected study apps:
-          <strong>Bible Readings 1914 (BRHC)</strong> and
-          <strong>Biblical Heritage #StudyBible</strong>. Together they support
-          structured Bible reading, curated study chains, commentary, and source
-          library workflows.
-        </p>
-        <p>
-          <strong>BiblicalHeritage.net</strong> is the central home for app
-          links, tutorials, shared lists, and future study downloads.
-        </p>
-      </section>
-
-      <section id="features">
-        <h2>#StudyBible Features</h2>
-        <ul>
-          <li>Fast chapter and verse navigation with custom study workflows.</li>
-          <li>Custom word and range selection with copy, highlight, and Strong's shortcuts.</li>
-          <li>Structured sharing using <strong>#tags</strong> and <strong>$tags</strong>.</li>
-          <li><strong>$tags</strong> support ordered study chains with notes between linked scriptures.</li>
-          <li>Commentary tools support imported PDF source works and metadata-driven study excerpts.</li>
-          <li>Bible Memory tools support curated verses, ranges, and grouped study review.</li>
-        </ul>
-      </section>
-
-      <section id="references">
-        <h2>App Links & Progress</h2>
-        <p class="muted">Status updated: March 8, 2026</p>
-        <ul>
-          <li>
-            <strong>Bible Readings 1914 (iOS):</strong>
-            <a href="https://apps.apple.com/us/app/bible-readings-1914/id6757504303"
-              >Live on the App Store</a
-            >.
-          </li>
-          <li>
-            <strong>Bible Readings 1914 (Android):</strong> internal testing is
-            now active through Google Play.
-          </li>
-          <li>
-            <strong>#StudyBible (iOS):</strong> submitted through Apple and pending release.
-          </li>
-          <li>
-            <strong>#StudyBible (Android):</strong> testing is active through Google Play, with release pending.
-          </li>
-          <li>
-            <strong>Community sharing:</strong> sharing is encouraged through the
-            <strong>Biblical Heritage #StudyBible</strong> Facebook page, where
-            users can exchange study lists, commentary material, and future
-            curated resources.
-          </li>
-        </ul>
-        <span class="tag-example"
-          >Shared study lists can be exported and imported between users. A short
-          identifying header may be included for clarity and referral to
-          BiblicalHeritage.net, but the app can still import the list content
-          even if that header has been removed.</span
-        >
-      </section>
-    </main>
-
+    <section class="summary-strip">
+      <div class="summary-grid">
+        <section>
+          <h3>Purpose</h3>
+          <p>These two apps are meant to make Bible study easier to organize, easier to share, and easier to use in homes, churches, and small study groups.</p>
+        </section>
+        <section>
+          <h3>Group Bible Study</h3>
+          <p>Group Bible study becomes stronger when everyone can move through the same passages, questions, notes, and study paths together. BRHC and #StudyBible were built to support that shared rhythm.</p>
+        </section>
+      </div>
+    </section>
+    <section class="tester-note">
+      <strong>Android Test Volunteers Needed</strong>
+      <p>If you would like to help with Google Play closed testing, please contact <a href="mailto:OurBiblicalHeritage@gmail.com">OurBiblicalHeritage@gmail.com</a>. We especially need volunteers who will install and briefly use the app after joining the test.</p>
+    </section>
     <div class="link-row">
       <a href="https://apps.apple.com/us/app/bible-readings-1914/id6757504303" class="nav-btn">BRHC on App Store</a>
-      <a href="brhc.html" class="nav-btn">Bible Readings 1914</a>
+      <a href="studybible.html" class="nav-btn">#StudyBible Progress</a>
+      <a href="brhc.html" class="nav-btn">BRHC Progress</a>
+      <a href="downloads.html" class="nav-btn">Desktop Downloads</a>
       <a href="privacy.html" class="nav-btn">Privacy Policy</a>
       <a href="https://biblicalheritage.net" class="nav-btn">BiblicalHeritage.net Home</a>
     </div>
-
     <footer>
-      <img src="public/Small.png" alt="Biblical Heritage Logo Small" class="bottom-logo" />
-      <p>
-        © 2026 Biblical Heritage. All rights reserved. |
-        <a href="mailto:OurBiblicalHeritage@gmail.com">OurBiblicalHeritage@gmail.com</a>
-      </p>
+      <img src="Small.png" alt="Biblical Heritage Logo Small" class="bottom-logo" />
+      <p>&copy; 2026 Biblical Heritage. All rights reserved. | <a href="mailto:OurBiblicalHeritage@gmail.com">OurBiblicalHeritage@gmail.com</a></p>
     </footer>
   </body>
 </html>
