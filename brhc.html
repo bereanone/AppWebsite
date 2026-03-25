@@ -36,6 +36,8 @@
       .actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:14px; }
       .btn { background-color:var(--accent); color:#fff; border:none; border-radius:10px; padding:10px 22px; font-size:1rem; cursor:pointer; text-decoration:none; display:inline-block; font-weight:700; }
       .btn:hover { background-color:var(--accent-dark); }
+      .badge-link { display:inline-flex; align-items:center; }
+      .badge-link img { display:block; height:40px; width:auto; }
       .section-block { background:#f3e8d6; border:1px solid #d2bea2; border-radius:10px; padding:14px; margin-top:18px; }
       .section-block h2 { margin-top:0; }
       @media (max-width: 700px) {
@@ -52,7 +54,7 @@
           <h1>Bible Readings 1914</h1>
           <p>BRHC is the classic question-and-answer Bible guide in digital form, built for topic study, quick reference, and shared reading across devices.</p>
           <div class="actions">
-            <a class="btn" href="https://apps.apple.com/us/app/bible-readings-1914/id6757504303">Open on App Store</a>
+            <a class="badge-link" href="https://apps.apple.com/us/app/bible-readings-1914/id6757504303" aria-label="Download Bible Readings 1914 on the App Store"><img src="/download-on-the-app-store.svg" alt="Download on the App Store" /></a>
             <a class="btn" href="https://github.com/bereanone/BRHC/releases/latest/download/BibleReadings1914-macOS.zip">Download for Mac</a>
             <a class="btn" href="https://github.com/bereanone/BRHC/releases/latest/download/BibleReadings1914-windows.zip">Download for Windows</a>
           </div>
