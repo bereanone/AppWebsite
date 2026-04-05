@@ -1,0 +1,2042 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Illustrated #StudyBible user manual with step-by-step instructions and screenshots.">
+  <link rel="canonical" href="https://biblicalheritage.net/usermanual.html" />
+  <title>#StudyBible User Manual | BiblicalHeritage.net</title>
+  <style>
+    :root {
+      --ink: #2b1d16;
+      --muted: #6e5a4e;
+      --paper: #f6efe3;
+      --card: #fffaf2;
+      --rule: #d7c2a8;
+      --accent: #8a572a;
+      --accent-soft: #ead8bf;
+      --accent-deep: #6f4422;
+      --code-bg: #f1e4d3;
+    }
+    @page {
+      size: Letter;
+      margin: 0.55in 0.58in;
+    }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.52;
+      font-size: 12pt;
+    }
+    main {
+      max-width: 8.2in;
+      margin: 0 auto;
+      padding: 0.45in 0.52in 0.6in;
+      background: var(--card);
+      box-sizing: border-box;
+    }
+    a {
+      color: var(--accent);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 2px;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      page-break-after: avoid;
+      break-after: avoid-page;
+      page-break-inside: avoid;
+      break-inside: avoid-page;
+      color: var(--ink);
+      margin-top: 1.15em;
+      margin-bottom: 0.34em;
+      font-weight: 700;
+    }
+    h1 {
+      font-size: 19pt;
+      border-bottom: 2px solid var(--rule);
+      padding-bottom: 0.18em;
+      margin-top: 0;
+      text-align: center;
+    }
+    h2 {
+      font-size: 15pt;
+      border: 1px solid #c8ae88;
+      background: linear-gradient(90deg, #efe0c8 0%, #f7efdf 100%);
+      padding: 0.32em 0.55em 0.34em;
+      margin-top: 1.5em;
+      border-radius: 10px;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.65);
+    }
+    h3 {
+      font-size: 13pt;
+      color: var(--accent-deep);
+      border-left: 5px solid var(--accent);
+      padding-left: 0.5em;
+      margin-top: 1.2em;
+    }
+    h4, h5, h6 {
+      font-size: 12pt;
+    }
+    h4 {
+      color: var(--accent-deep);
+      background: linear-gradient(90deg, var(--accent-soft) 0%, rgba(234, 216, 191, 0) 78%);
+      padding: 0.16em 0.38em;
+      border-radius: 6px;
+    }
+    p {
+      margin: 0.45em 0 0.6em;
+      orphans: 3;
+      widows: 3;
+    }
+    ul {
+      margin: 0.35em 0 0.9em 1.2em;
+      padding: 0;
+    }
+    li {
+      margin: 0.24em 0;
+    }
+    ul.steps li {
+      list-style: decimal;
+    }
+    .manual-toc {
+      margin: 0 0 1.25em;
+      padding: 0.35em 0 0.2em;
+      border-bottom: 1px solid var(--rule);
+    }
+    .anchor-target {
+      display: block;
+      position: relative;
+      top: -0.12in;
+      visibility: hidden;
+    }
+    .manual-toc h2 {
+      margin-top: 0.2em;
+    }
+    .toc-intro {
+      color: var(--muted);
+      margin-top: 0.25em;
+      margin-bottom: 0.7em;
+    }
+    .toc-list {
+      list-style: none;
+      margin-left: 0;
+      padding-left: 0;
+    }
+    .toc-list li {
+      margin: 0.2em 0;
+      line-height: 1.28;
+    }
+    .toc-list a {
+      display: inline-block;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(138, 87, 42, 0.35);
+    }
+    .toc-level-2 {
+      margin-top: 0.55em;
+      padding-top: 0.28em;
+      border-top: 1px solid rgba(199, 174, 136, 0.45);
+      font-weight: 700;
+      font-size: 1.02em;
+    }
+    .toc-level-2:first-child {
+      border-top: 0;
+      padding-top: 0;
+      margin-top: 0;
+    }
+    .toc-level-3 {
+      margin-left: 1.2em;
+      color: var(--accent-deep);
+    }
+    .toc-level-4 {
+      margin-left: 2.45em;
+      font-size: 0.93em;
+      color: var(--muted);
+    }
+    .toc-level-3::before,
+    .toc-level-4::before {
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 0.45em;
+      border-top: 1px solid rgba(138, 87, 42, 0.45);
+    }
+    .toc-level-3::before {
+      width: 0.8em;
+    }
+    .toc-level-4::before {
+      width: 1.2em;
+    }
+    .section-link {
+      float: right;
+      font-size: 0.72em;
+      font-weight: 500;
+    }
+    .toc-back {
+      margin: 0.15em 0 0.75em;
+      text-align: right;
+      font-size: 9.5pt;
+    }
+    .toc-back a {
+      text-decoration: none;
+      border-bottom: 1px solid rgba(138, 87, 42, 0.35);
+    }
+    code {
+      font-family: "SFMono-Regular", Menlo, Consolas, monospace;
+      background: var(--code-bg);
+      padding: 0.06em 0.25em;
+      border-radius: 4px;
+      font-size: 0.88em;
+    }
+    pre {
+      background: var(--code-bg);
+      padding: 0.5em 0.55em;
+      border-radius: 8px;
+      overflow: hidden;
+      white-space: pre-wrap;
+      word-break: break-word;
+      border: 1px solid var(--rule);
+      page-break-inside: avoid;
+      break-inside: avoid-page;
+      font-size: 0.9em;
+    }
+    pre code {
+      background: transparent;
+      padding: 0;
+    }
+    figure.manual-figure {
+      margin: 0.95em 0 1.15em;
+      page-break-inside: avoid;
+      break-inside: avoid-page;
+    }
+    figure.manual-figure img {
+      display: block;
+      width: auto;
+      max-width: 72%;
+      max-height: 4.75in;
+      margin: 0 auto;
+      border: 1px solid var(--rule);
+      border-radius: 10px;
+      background: white;
+      box-shadow: 0 1px 3px rgba(43, 29, 22, 0.08);
+    }
+    figure.manual-figure figcaption {
+      margin-top: 0.4em;
+      color: var(--muted);
+      font-size: 9.5pt;
+      text-align: center;
+      font-style: italic;
+      max-width: 75%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    strong {
+      font-weight: 700;
+    }
+    em {
+      font-style: italic;
+    }
+  
+    .site-shell {
+      max-width: 8.2in;
+      margin: 0 auto;
+      padding: 0.45in 0.52in 0.6in;
+      box-sizing: border-box;
+    }
+    .site-topbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 0 1rem;
+    }
+    .site-topbar p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+    .site-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .site-btn {
+      display: inline-block;
+      text-decoration: none;
+      background: var(--accent);
+      color: #fffaf2;
+      border-radius: 999px;
+      padding: 0.56rem 0.92rem;
+      font-size: 0.96rem;
+      font-weight: 700;
+    }
+    .site-btn.secondary {
+      background: #e8d8c3;
+      color: var(--accent-deep);
+      border: 1px solid #c8ae88;
+    }
+    .feedback-panel {
+      margin: 1.2rem 0 0;
+      padding: 0.9rem 1rem;
+      background: #efe0c9;
+      border: 1px solid #c9ae86;
+      border-radius: 12px;
+    }
+    .feedback-panel h2 {
+      margin-top: 0;
+    }
+    .feedback-panel p:last-child {
+      margin-bottom: 0;
+    }
+
+  </style>
+</head>
+<body>
+
+    <div class="site-shell">
+      <div class="site-topbar">
+        <p>Interactive website edition of the #StudyBible user manual.</p>
+        <div class="site-actions">
+          <a class="site-btn secondary" href="#toc">Manual Contents</a>
+          <a class="site-btn secondary" href="https://biblicalheritage.net" target="_blank" rel="noreferrer">Main Website</a>
+          <a class="site-btn" href="mailto:OurBiblicalHeritage@gmail.com?subject=%23StudyBible%20Manual%20Feedback">Request More Help</a>
+        </div>
+      </div>
+    </div>
+  <main>
+    <nav id="toc" class="manual-toc" aria-labelledby="table-of-contents">
+  <h2 id="table-of-contents">Table of Contents</h2>
+  <p class="toc-intro">Use these links to jump directly to the section you want. Major sections and common subtopics are linked below.</p>
+  <ul class="toc-list">
+    <li id="toc-introduction" class="toc-level-2"><a href="#introduction">Introduction</a></li>
+    <li id="toc-manual-overview" class="toc-level-2"><a href="#manual-overview">Manual Overview</a></li>
+    <li id="toc-main-feature-areas" class="toc-level-3"><a href="#main-feature-areas">Main Feature Areas</a></li>
+    <li id="toc-quick-navigation-guide" class="toc-level-3"><a href="#quick-navigation-guide">Quick Navigation Guide</a></li>
+    <li id="toc-how-to-use-this-manual" class="toc-level-3"><a href="#how-to-use-this-manual">How To Use This Manual</a></li>
+    <li id="toc-most-powerful-features" class="toc-level-3"><a href="#most-powerful-features">Most Powerful Features</a></li>
+    <li id="toc-entry-screen" class="toc-level-2"><a href="#entry-screen">Entry Screen</a></li>
+    <li id="toc-main-controls" class="toc-level-3"><a href="#main-controls">Main Controls</a></li>
+    <li id="toc-choose-theme" class="toc-level-4"><a href="#choose-theme">Choose Theme</a></li>
+    <li id="toc-app-logo-and-title" class="toc-level-4"><a href="#app-logo-and-title">App Logo and Title</a></li>
+    <li id="toc-scripture-quotation" class="toc-level-4"><a href="#scripture-quotation">Scripture Quotation</a></li>
+    <li id="toc-description-panel" class="toc-level-4"><a href="#description-panel">Description Panel</a></li>
+    <li id="toc-bible-explorer" class="toc-level-4"><a href="#bible-explorer">Bible Explorer</a></li>
+    <li id="toc-utilities" class="toc-level-4"><a href="#utilities">Utilities</a></li>
+    <li id="toc-about" class="toc-level-4"><a href="#about">About</a></li>
+    <li id="toc-entry-screen-summary" class="toc-level-3"><a href="#entry-screen-summary">Entry Screen Summary</a></li>
+    <li id="toc-utilities-2" class="toc-level-2"><a href="#utilities-2">Utilities</a></li>
+    <li id="toc-main-controls-2" class="toc-level-3"><a href="#main-controls-2">Main Controls</a></li>
+    <li id="toc-back-arrow" class="toc-level-4"><a href="#back-arrow">Back Arrow</a></li>
+    <li id="toc-utilities-title-and-description" class="toc-level-4"><a href="#utilities-title-and-description">Utilities Title and Description</a></li>
+    <li id="toc-phone-silencer-geofence-church-automute" class="toc-level-4"><a href="#phone-silencer-geofence-church-automute">Phone Silencer (Geofence) / Church AutoMute</a></li>
+    <li id="toc-cloud-backup" class="toc-level-4"><a href="#cloud-backup">Cloud Backup</a></li>
+    <li id="toc-commentary-library-setup" class="toc-level-4"><a href="#commentary-library-setup">Commentary Library Setup</a></li>
+    <li id="toc-commentary-instructions" class="toc-level-4"><a href="#commentary-instructions">Commentary Instructions</a></li>
+    <li id="toc-commentary-block-sharing" class="toc-level-4"><a href="#commentary-block-sharing">Commentary Block Sharing</a></li>
+    <li id="toc-community-links" class="toc-level-4"><a href="#community-links">Community Links</a></li>
+    <li id="toc-support-biblical-heritage" class="toc-level-4"><a href="#support-biblical-heritage">Support Biblical Heritage</a></li>
+    <li id="toc-open-bible-explorer" class="toc-level-4"><a href="#open-bible-explorer">Open Bible Explorer</a></li>
+    <li id="toc-utilities-summary" class="toc-level-3"><a href="#utilities-summary">Utilities Summary</a></li>
+    <li id="toc-importing-commentary-files" class="toc-level-2"><a href="#importing-commentary-files">Importing Commentary Files</a></li>
+    <li id="toc-important-caution" class="toc-level-3"><a href="#important-caution">Important Caution</a></li>
+    <li id="toc-example-using-the-egw-writings-website" class="toc-level-3"><a href="#example-using-the-egw-writings-website">Example Using the EGW Writings Website</a></li>
+    <li id="toc-commentary-and-research" class="toc-level-3"><a href="#commentary-and-research">Commentary And Research</a></li>
+    <li id="toc-recommended-workflow" class="toc-level-3"><a href="#recommended-workflow">Recommended Workflow</a></li>
+    <li id="toc-managing-files-from-the-library-screen" class="toc-level-3"><a href="#managing-files-from-the-library-screen">Managing Files From The Library Screen</a></li>
+    <li id="toc-choose-sync-base" class="toc-level-3"><a href="#choose-sync-base">Choose Sync Base</a></li>
+    <li id="toc-sync-now" class="toc-level-3"><a href="#sync-now">Sync Now</a></li>
+    <li id="toc-notes" class="toc-level-3"><a href="#notes">Notes</a></li>
+    <li id="toc-bible-explorer-2" class="toc-level-2"><a href="#bible-explorer-2">Bible Explorer</a></li>
+    <li id="toc-most-important-sharing-feature" class="toc-level-3"><a href="#most-important-sharing-feature">Most Important Sharing Feature</a></li>
+    <li id="toc-bible-explorer-summary" class="toc-level-3"><a href="#bible-explorer-summary">Bible Explorer Summary</a></li>
+    <li id="toc-top-bar-back-and-search" class="toc-level-3"><a href="#top-bar-back-and-search">Top Bar: Back And Search</a></li>
+    <li id="toc-back" class="toc-level-4"><a href="#back">Back</a></li>
+    <li id="toc-search" class="toc-level-4"><a href="#search">Search</a></li>
+    <li id="toc-verse-search-screen" class="toc-level-3"><a href="#verse-search-screen">Verse Search Screen</a></li>
+    <li id="toc-how-to-narrow-a-search" class="toc-level-3"><a href="#how-to-narrow-a-search">How To Narrow A Search</a></li>
+    <li id="toc-1-search-for-an-exact-phrase" class="toc-level-4"><a href="#1-search-for-an-exact-phrase">1. Search for an exact phrase</a></li>
+    <li id="toc-2-use-the-section-filter" class="toc-level-4"><a href="#2-use-the-section-filter">2. Use the section filter</a></li>
+    <li id="toc-3-use-a-wildcard" class="toc-level-4"><a href="#3-use-a-wildcard">3. Use a wildcard</a></li>
+    <li id="toc-4-use-logical-search-terms" class="toc-level-4"><a href="#4-use-logical-search-terms">4. Use logical search terms</a></li>
+    <li id="toc-5-use-parentheses" class="toc-level-4"><a href="#5-use-parentheses">5. Use parentheses</a></li>
+    <li id="toc-6-reset-the-search" class="toc-level-4"><a href="#6-reset-the-search">6. Reset the search</a></li>
+    <li id="toc-search-tips" class="toc-level-3"><a href="#search-tips">Search Tips</a></li>
+    <li id="toc-search-recommendation" class="toc-level-3"><a href="#search-recommendation">Search Recommendation</a></li>
+    <li id="toc-verse-picker" class="toc-level-3"><a href="#verse-picker">Verse Picker</a></li>
+    <li id="toc-how-the-verse-picker-works" class="toc-level-3"><a href="#how-the-verse-picker-works">How The Verse Picker Works</a></li>
+    <li id="toc-color-groupings-in-the-book-list" class="toc-level-3"><a href="#color-groupings-in-the-book-list">Color Groupings In The Book List</a></li>
+    <li id="toc-why-the-color-groupings-help" class="toc-level-3"><a href="#why-the-color-groupings-help">Why The Color Groupings Help</a></li>
+    <li id="toc-verse-picker-summary" class="toc-level-3"><a href="#verse-picker-summary">Verse Picker Summary</a></li>
+    <li id="toc-help-button" class="toc-level-3"><a href="#help-button">Help Button</a></li>
+    <li id="toc-desktop-interaction-help" class="toc-level-3"><a href="#desktop-interaction-help">Desktop Interaction Help</a></li>
+    <li id="toc-why-the-help-button-matters" class="toc-level-3"><a href="#why-the-help-button-matters">Why The Help Button Matters</a></li>
+    <li id="toc-help-button-summary" class="toc-level-3"><a href="#help-button-summary">Help Button Summary</a></li>
+    <li id="toc-verse-selection-and-range-selection" class="toc-level-3"><a href="#verse-selection-and-range-selection">Verse Selection And Range Selection</a></li>
+    <li id="toc-selecting-a-verse" class="toc-level-4"><a href="#selecting-a-verse">Selecting A Verse</a></li>
+    <li id="toc-selecting-a-range" class="toc-level-4"><a href="#selecting-a-range">Selecting A Range</a></li>
+    <li id="toc-range-actions" class="toc-level-4"><a href="#range-actions">Range Actions</a></li>
+    <li id="toc-highlighting-a-selection" class="toc-level-4"><a href="#highlighting-a-selection">Highlighting A Selection</a></li>
+    <li id="toc-why-strong-s-may-be-grayed-out" class="toc-level-4"><a href="#why-strong-s-may-be-grayed-out">Why Strong's May Be Grayed Out</a></li>
+    <li id="toc-topic-picker" class="toc-level-3"><a href="#topic-picker">Topic Picker</a></li>
+    <li id="toc-how-to-narrow-the-topic-list" class="toc-level-3"><a href="#how-to-narrow-the-topic-list">How To Narrow The Topic List</a></li>
+    <li id="toc-1-start-with-a-major-group" class="toc-level-4"><a href="#1-start-with-a-major-group">1. Start with a major group</a></li>
+    <li id="toc-2-narrow-again-with-a-subgroup-or-book" class="toc-level-4"><a href="#2-narrow-again-with-a-subgroup-or-book">2. Narrow again with a subgroup or book</a></li>
+    <li id="toc-3-choose-a-topic" class="toc-level-4"><a href="#3-choose-a-topic">3. Choose a topic</a></li>
+    <li id="toc-returning-to-all-topics" class="toc-level-3"><a href="#returning-to-all-topics">Returning To All Topics</a></li>
+    <li id="toc-what-happens-after-you-pick-a-topic" class="toc-level-3"><a href="#what-happens-after-you-pick-a-topic">What Happens After You Pick A Topic</a></li>
+    <li id="toc-why-the-topic-picker-helps" class="toc-level-3"><a href="#why-the-topic-picker-helps">Why The Topic Picker Helps</a></li>
+    <li id="toc-topic-picker-summary" class="toc-level-3"><a href="#topic-picker-summary">Topic Picker Summary</a></li>
+    <li id="toc-tag-lists-and-study-chains" class="toc-level-3"><a href="#tag-lists-and-study-chains">Tag Lists And Study Chains</a></li>
+    <li id="toc-tags-shareable-verse-lists" class="toc-level-4"><a href="#tags-shareable-verse-lists">`#` Tags: Shareable Verse Lists</a></li>
+    <li id="toc-tags-teaching-and-presentation-chains" class="toc-level-4"><a href="#tags-teaching-and-presentation-chains">`$` Tags: Teaching And Presentation Chains</a></li>
+    <li id="toc-how-the-two-work-together" class="toc-level-4"><a href="#how-the-two-work-together">How The Two Work Together</a></li>
+    <li id="toc-tags-building-and-sharing-verse-lists" class="toc-level-3"><a href="#tags-building-and-sharing-verse-lists">`#` Tags: Building And Sharing Verse Lists</a></li>
+    <li id="toc-what-tags-are-for" class="toc-level-4"><a href="#what-tags-are-for">What `#` Tags Are For</a></li>
+    <li id="toc-top-controls-on-the-screen" class="toc-level-4"><a href="#top-controls-on-the-screen">Top Controls On The `#` Screen</a></li>
+    <li id="toc-choosing-or-creating-a-tag" class="toc-level-4"><a href="#choosing-or-creating-a-tag">Choosing Or Creating A `#` Tag</a></li>
+    <li id="toc-worked-example-soulsleep" class="toc-level-4"><a href="#worked-example-soulsleep">Worked Example: `#SoulSleep`</a></li>
+    <li id="toc-step-by-step-create-and-build-a-tag" class="toc-level-4"><a href="#step-by-step-create-and-build-a-tag">Step-By-Step: Create And Build A `#` Tag</a></li>
+    <li id="toc-example-search-and-add-to-soulsleep" class="toc-level-4"><a href="#example-search-and-add-to-soulsleep">Example: Search And Add To `#SoulSleep`</a></li>
+    <li id="toc-example-creating-a-category" class="toc-level-4"><a href="#example-creating-a-category">Example: Creating A Category</a></li>
+    <li id="toc-categories" class="toc-level-4"><a href="#categories">Categories</a></li>
+    <li id="toc-browsing-existing-tags" class="toc-level-4"><a href="#browsing-existing-tags">Browsing Existing `#` Tags</a></li>
+    <li id="toc-reviewing-a-saved-list" class="toc-level-4"><a href="#reviewing-a-saved-list">Reviewing A Saved `#` List</a></li>
+    <li id="toc-main-actions-on-the-review-screen" class="toc-level-4"><a href="#main-actions-on-the-review-screen">Main Actions On The Review Screen</a></li>
+    <li id="toc-why-review-mode-matters" class="toc-level-4"><a href="#why-review-mode-matters">Why Review Mode Matters</a></li>
+    <li id="toc-why-tags-matter" class="toc-level-4"><a href="#why-tags-matter">Why `#` Tags Matter</a></li>
+    <li id="toc-tag-summary" class="toc-level-4"><a href="#tag-summary">`#` Tag Summary</a></li>
+    <li id="toc-tags-teaching-and-presentation-chains-2" class="toc-level-3"><a href="#tags-teaching-and-presentation-chains-2">`$` Tags: Teaching And Presentation Chains</a></li>
+    <li id="toc-how-tags-compare-to-tags" class="toc-level-4"><a href="#how-tags-compare-to-tags">How `$` Tags Compare To `#` Tags</a></li>
+    <li id="toc-main-controls-on-the-screen" class="toc-level-4"><a href="#main-controls-on-the-screen">Main Controls On The `$` Screen</a></li>
+    <li id="toc-content-area" class="toc-level-4"><a href="#content-area">Content Area</a></li>
+    <li id="toc-worked-example-import-soulsleep-into-a-tag" class="toc-level-4"><a href="#worked-example-import-soulsleep-into-a-tag">Worked Example: Import `#SoulSleep` Into A `$` Tag</a></li>
+    <li id="toc-step-by-step-turn-a-tag-into-a-teaching-chain" class="toc-level-4"><a href="#step-by-step-turn-a-tag-into-a-teaching-chain">Step-By-Step: Turn A `#` Tag Into A `$` Teaching Chain</a></li>
+    <li id="toc-working-inside-a-study-chain" class="toc-level-4"><a href="#working-inside-a-study-chain">Working Inside A `$` Study Chain</a></li>
+    <li id="toc-what-this-screen-shows" class="toc-level-4"><a href="#what-this-screen-shows">What This Screen Shows</a></li>
+    <li id="toc-study-notes-and-commentary-segments" class="toc-level-4"><a href="#study-notes-and-commentary-segments">Study Notes And Commentary Segments</a></li>
+    <li id="toc-main-controls-on-the-study-chain-screen" class="toc-level-4"><a href="#main-controls-on-the-study-chain-screen">Main Controls On The `$` Study-Chain Screen</a></li>
+    <li id="toc-why-this-screen-matters" class="toc-level-4"><a href="#why-this-screen-matters">Why This Screen Matters</a></li>
+    <li id="toc-dynamic-slide-presentation" class="toc-level-4"><a href="#dynamic-slide-presentation">Dynamic Slide Presentation</a></li>
+    <li id="toc-why-dynamic-presentation-helps" class="toc-level-4"><a href="#why-dynamic-presentation-helps">Why Dynamic Presentation Helps</a></li>
+    <li id="toc-export-and-sharing-for-tags" class="toc-level-4"><a href="#export-and-sharing-for-tags">Export And Sharing For `$` Tags</a></li>
+    <li id="toc-finding-saved-lists" class="toc-level-4"><a href="#finding-saved-lists">Finding Saved Lists</a></li>
+    <li id="toc-why-tags-matter-2" class="toc-level-4"><a href="#why-tags-matter-2">Why `$` Tags Matter</a></li>
+    <li id="toc-tag-summary-2" class="toc-level-4"><a href="#tag-summary-2">`$` Tag Summary</a></li>
+    <li id="toc-bible-explorer-bottom-bar" class="toc-level-2"><a href="#bible-explorer-bottom-bar">Bible Explorer Bottom Bar</a></li>
+    <li id="toc-history" class="toc-level-3"><a href="#history">History</a></li>
+    <li id="toc-text-size-a-and-a" class="toc-level-3"><a href="#text-size-a-and-a">Text Size: `A-` and `A+`</a></li>
+    <li id="toc-commentary-button" class="toc-level-3"><a href="#commentary-button">Commentary Button</a></li>
+    <li id="toc-commentary-and-research-tabs" class="toc-level-3"><a href="#commentary-and-research-tabs">Commentary And Research Tabs</a></li>
+    <li id="toc-commentary" class="toc-level-4"><a href="#commentary">Commentary</a></li>
+    <li id="toc-research" class="toc-level-4"><a href="#research">Research</a></li>
+    <li id="toc-why-both-views-matter" class="toc-level-3"><a href="#why-both-views-matter">Why Both Views Matter</a></li>
+    <li id="toc-research-library-connection" class="toc-level-3"><a href="#research-library-connection">Research Library Connection</a></li>
+    <li id="toc-commentary-button-summary" class="toc-level-3"><a href="#commentary-button-summary">Commentary Button Summary</a></li>
+    <li id="toc-mode-and-theme-menu" class="toc-level-3"><a href="#mode-and-theme-menu">Mode And Theme Menu</a></li>
+    <li id="toc-theme-selector" class="toc-level-3"><a href="#theme-selector">Theme Selector</a></li>
+    <li id="toc-interlinear-mode" class="toc-level-3"><a href="#interlinear-mode">Interlinear Mode</a></li>
+    <li id="toc-interlinear-options" class="toc-level-3"><a href="#interlinear-options">Interlinear Options</a></li>
+    <li id="toc-opening-the-dictionary" class="toc-level-3"><a href="#opening-the-dictionary">Opening The Dictionary</a></li>
+    <li id="toc-related-verse-list" class="toc-level-3"><a href="#related-verse-list">Related Verse List</a></li>
+    <li id="toc-why-interlinear-mode-matters" class="toc-level-3"><a href="#why-interlinear-mode-matters">Why Interlinear Mode Matters</a></li>
+    <li id="toc-bible-memory" class="toc-level-3"><a href="#bible-memory">Bible Memory</a></li>
+    <li id="toc-bible-memory-main-screen" class="toc-level-3"><a href="#bible-memory-main-screen">Bible Memory Main Screen</a></li>
+    <li id="toc-step-by-step-import-a-tag-into-bible-memory" class="toc-level-3"><a href="#step-by-step-import-a-tag-into-bible-memory">Step-By-Step: Import A `#` Tag Into Bible Memory</a></li>
+    <li id="toc-what-the-main-buttons-do" class="toc-level-3"><a href="#what-the-main-buttons-do">What The Main Buttons Do</a></li>
+    <li id="toc-how-bible-memory-works" class="toc-level-3"><a href="#how-bible-memory-works">How Bible Memory Works</a></li>
+    <li id="toc-step-by-step-run-a-bible-memory-review" class="toc-level-3"><a href="#step-by-step-run-a-bible-memory-review">Step-By-Step: Run A Bible Memory Review</a></li>
+    <li id="toc-review-stages" class="toc-level-3"><a href="#review-stages">Review Stages</a></li>
+    <li id="toc-what-the-user-sees-during-review" class="toc-level-3"><a href="#what-the-user-sees-during-review">What The User Sees During Review</a></li>
+    <li id="toc-why-bible-memory-fits-with-tags" class="toc-level-3"><a href="#why-bible-memory-fits-with-tags">Why Bible Memory Fits With `#` Tags</a></li>
+    <li id="toc-bible-memory-summary" class="toc-level-3"><a href="#bible-memory-summary">Bible Memory Summary</a></li>
+    <li id="toc-closing-note" class="toc-level-2"><a href="#closing-note">Closing Note</a></li>
+  </ul>
+</nav>
+    <a id="biblical-heritage-studybible-user-manual" class="anchor-target"></a><h1>Biblical Heritage #StudyBible User Manual</h1>
+    <a id="introduction" class="anchor-target"></a><h2>Introduction</h2>
+<p class="toc-back"><a href="#toc-introduction">Back to TOC</a></p>
+    <p>This manual explains the main screens and controls in Biblical Heritage #StudyBible. It is designed to help new users begin reading, studying, navigating, and using the main tools of the app.</p>
+    <p>Additional sections can be expanded over time as screenshots, examples, and workflow notes are added.</p>
+    <a id="manual-overview" class="anchor-target"></a><h2>Manual Overview</h2>
+<p class="toc-back"><a href="#toc-manual-overview">Back to TOC</a></p>
+    <p>This manual is organized so readers can either work through the app step by step or jump directly to the section they need.</p>
+    <a id="main-feature-areas" class="anchor-target"></a><h3>Main Feature Areas</h3>
+<p class="toc-back"><a href="#toc-main-feature-areas">Back to TOC</a></p>
+    <p>Biblical Heritage #StudyBible includes these main areas:</p>
+    <ul>
+    <li>Entry Screen</li>
+    <li>Bible Explorer</li>
+    <li>Utilities</li>
+    <li>Themes and reading appearance</li>
+    <li>Highlights and tags</li>
+    <li>Interlinear and study tools</li>
+    <li>Notes, commentary, and study workflows</li>
+    <li>Support and About information</li>
+    </ul>
+    <a id="quick-navigation-guide" class="anchor-target"></a><h3>Quick Navigation Guide</h3>
+<p class="toc-back"><a href="#toc-quick-navigation-guide">Back to TOC</a></p>
+    <p>Readers who want to jump directly to a subject can use the section list below.</p>
+    <ul>
+    <li><a href="#entry-screen">Entry Screen</a>: Opening screen, main buttons, and first actions</li>
+    <li><a href="#bible-explorer">Bible Explorer</a>: Main reading and navigation area</li>
+    <li><a href="#utilities">Utilities</a>: Setup tools, support tools, and additional functions</li>
+    <li><a href="#choose-theme">Themes</a>: Reading themes and display choices</li>
+    <li><a href="#tag-lists-and-study-chains">Study Tools</a>: Highlights, how to use <code>#</code> tags, how to use <code>$</code> tags, Bible Memory tools, interlinear tools, and related study workflows</li>
+    <li><a href="#importing-commentary-files">Notes and Commentary</a>: Study notes, commentary access, and sharing-related workflows</li>
+    <li><a href="#about">About and Support</a>: App information, version details, and support access</li>
+    </ul>
+    <a id="how-to-use-this-manual" class="anchor-target"></a><h3>How To Use This Manual</h3>
+<p class="toc-back"><a href="#toc-how-to-use-this-manual">Back to TOC</a></p>
+    <p>New users may want to begin with the Entry Screen section and continue in order.</p>
+    <p>Experienced users can use the overview and section headings to move directly to the feature they want to learn.</p>
+    <a id="most-powerful-features" class="anchor-target"></a><h3>Most Powerful Features</h3>
+<p class="toc-back"><a href="#toc-most-powerful-features">Back to TOC</a></p>
+    <p>The strongest everyday features in Biblical Heritage #StudyBible are these:</p>
+    <ul>
+    <li><code>Bible Explorer</code>: the main reading and study environment</li>
+    <li><code># tags</code>: reusable verse lists for sharing, topical study, and memory work</li>
+    <li><code>$ tags</code>: ordered study chains for teaching, sermons, and presentation use</li>
+    <li><code>Verse Search</code>: fast Scripture search with filters and logic</li>
+    <li><code>Commentary Library</code>: imported commentary and research material for deeper study</li>
+    <li><code>Cloud Backup</code>: backup and restore for preserving study work</li>
+    </ul>
+    <p>If you want the shortest path into the app's most useful workflows, start with <code>Bible Explorer</code>, then learn <code>#</code> tags and <code>$</code> tags.</p>
+    <a id="entry-screen" class="anchor-target"></a><h2>Entry Screen</h2>
+<p class="toc-back"><a href="#toc-entry-screen">Back to TOC</a></p>
+    <p>The Entry Screen is the opening page of Biblical Heritage #StudyBible. It provides access to the main study area, app utilities, theme selection, and general app information.</p>
+    <a id="main-controls" class="anchor-target"></a><h3>Main Controls</h3>
+<p class="toc-back"><a href="#toc-main-controls">Back to TOC</a></p>
+    <a id="choose-theme" class="anchor-target"></a><h4>Choose Theme</h4>
+<p class="toc-back"><a href="#toc-choose-theme">Back to TOC</a></p>
+    <p>The <code>aA</code> control in the upper-right corner opens the theme selector for the current session.</p>
+    <p>From the Entry Screen, the user can quickly choose from the main reading themes. Additional themes can also be accessed later from the Bible Explorer screen.</p>
+    <p>Purpose:</p>
+    <ul>
+    <li>Adjusts the visual reading theme.</li>
+    <li>Helps make the display more comfortable for different lighting conditions and reading preferences.</li>
+    </ul>
+    <a id="app-logo-and-title" class="anchor-target"></a><h4>App Logo and Title</h4>
+<p class="toc-back"><a href="#toc-app-logo-and-title">Back to TOC</a></p>
+    <p>The Biblical Heritage logo and the <code>Biblical Heritage #StudyBible</code> title identify the app and confirm that the user is on the opening screen.</p>
+    <p>This part of the screen is informational and does not open another page.</p>
+    <a id="scripture-quotation" class="anchor-target"></a><h4>Scripture Quotation</h4>
+<p class="toc-back"><a href="#toc-scripture-quotation">Back to TOC</a></p>
+    <p>The Entry Screen displays a welcome verse:</p>
+    <p><code>&quot;But sanctify the Lord God in your hearts: and be ready always to give an answer to every man that asketh you a reason of the hope that is in you with meekness and fear:&quot;</code></p>
+    <p><code>1 Peter 3:15 (KJV)</code></p>
+    <p>This verse is presented as an opening reminder of the spirit and purpose of the app. It is informational and is not a button.</p>
+    <a id="description-panel" class="anchor-target"></a><h4>Description Panel</h4>
+<p class="toc-back"><a href="#toc-description-panel">Back to TOC</a></p>
+    <p>The description panel provides a brief summary of the app:</p>
+    <p><code>A shareable KJV study Bible for personal and group study with highlights, tags, and interlinear tools.</code></p>
+    <p>This panel introduces the main purpose of the application and is informational only.</p>
+    <a id="bible-explorer" class="anchor-target"></a><h4>Bible Explorer</h4>
+<p class="toc-back"><a href="#toc-bible-explorer">Back to TOC</a></p>
+    <p>The <code>Bible Explorer</code> button opens the main reading and study area of the app.</p>
+    <p>This is the primary action on the Entry Screen and is the normal starting point for reading and study.</p>
+    <p>Purpose:</p>
+    <ul>
+    <li>Opens the main Bible reading screen.</li>
+    <li>Gives access to the study environment and navigation tools.</li>
+    <li>Serves as the usual starting point for daily use.</li>
+    </ul>
+    <a id="utilities" class="anchor-target"></a><h4>Utilities</h4>
+<p class="toc-back"><a href="#toc-utilities">Back to TOC</a></p>
+    <p>The <code>Utilities</code> button opens the utilities section of the app.</p>
+    <p>This area is used for support tools, setup features, and additional app functions that are separate from the main reading screen.</p>
+    <p>Purpose:</p>
+    <ul>
+    <li>Opens tools and support features.</li>
+    <li>Provides access to setup-related functions.</li>
+    <li>Separates utility functions from the main reading area.</li>
+    </ul>
+    <a id="about" class="anchor-target"></a><h4>About</h4>
+<p class="toc-back"><a href="#toc-about">Back to TOC</a></p>
+    <p>The <code>About</code> button opens the About dialog.</p>
+    <p>The About dialog includes general app information such as:</p>
+    <ul>
+    <li>App name</li>
+    <li>Version information</li>
+    <li>Copyright information</li>
+    <li>Support access</li>
+    </ul>
+    <p>From the About dialog, the user can also open support information when needed.</p>
+    <a id="entry-screen-summary" class="anchor-target"></a><h3>Entry Screen Summary</h3>
+<p class="toc-back"><a href="#toc-entry-screen-summary">Back to TOC</a></p>
+    <p>When the app opens, the Entry Screen appears. Use <code>Bible Explorer</code> to begin reading and study. Use <code>Utilities</code> for setup tools and support functions. Use <code>Choose Theme</code> in the upper-right corner to select a reading theme for the current session. Additional themes can also be accessed later from the Bible Explorer screen. Use <code>About</code> for version and support information.</p>
+    <a id="utilities-2" class="anchor-target"></a><h2>Utilities</h2>
+<p class="toc-back"><a href="#toc-utilities-2">Back to TOC</a></p>
+    <p>The Utilities screen contains setup, sharing, backup, support, and study-library tools for Biblical Heritage #StudyBible.</p>
+    <p>This screen is reached from the <code>Utilities</code> button on the Entry Screen.</p>
+    <a id="main-controls-2" class="anchor-target"></a><h3>Main Controls</h3>
+<p class="toc-back"><a href="#toc-main-controls-2">Back to TOC</a></p>
+    <a id="back-arrow" class="anchor-target"></a><h4>Back Arrow</h4>
+<p class="toc-back"><a href="#toc-back-arrow">Back to TOC</a></p>
+    <p>The back arrow in the upper-left corner returns to the starting screen.</p>
+    <p>Use this control when you want to leave Utilities and go back without opening another tool.</p>
+    <a id="utilities-title-and-description" class="anchor-target"></a><h4>Utilities Title and Description</h4>
+<p class="toc-back"><a href="#toc-utilities-title-and-description">Back to TOC</a></p>
+    <p>The title and subtitle identify this page as the utility area of the app.</p>
+    <p>The subtitle explains the purpose of the screen:</p>
+    <p><code>Setup and sharing tools for Biblical Heritage #StudyBible.</code></p>
+    <p>This part of the screen is informational only.</p>
+    <a id="phone-silencer-geofence-church-automute" class="anchor-target"></a><h4>Phone Silencer (Geofence) / Church AutoMute</h4>
+<p class="toc-back"><a href="#toc-phone-silencer-geofence-church-automute">Back to TOC</a></p>
+    <p>This control opens the church silencing feature area.</p>
+    <p>Depending on the app version, this feature may appear as <code>Phone Silencer (Geofence)</code> or <code>Church AutoMute</code>.</p>
+    <p>In the current corrected version, <code>Church AutoMute</code> displays a notice explaining that the feature is under construction for a future version. The notice explains that setup is being simplified so it will be easier to use for silencing a phone during church and restoring normal mode afterward.</p>
+    <p>Purpose:</p>
+    <ul>
+    <li>Identifies the planned church silencing feature.</li>
+    <li>Explains that the feature is not yet fully available in the current version.</li>
+    <li>Helps users understand that this area is reserved for a future update.</li>
+    </ul>
+    <a id="cloud-backup" class="anchor-target"></a><h4>Cloud Backup</h4>
+<p class="toc-back"><a href="#toc-cloud-backup">Back to TOC</a></p>
+    <p>The <code>Cloud Backup</code> button opens the backup and restore tools.</p>
+    <p>Purpose:</p>
+    <ul>
+    <li>Helps protect study material and user data.</li>
+    <li>Provides access to cloud-based saving and restoration features.</li>
+    <li>Supports moving or recovering study information when needed.</li>
+    </ul>
+    <p>When opened, the Cloud Backup dialog explains that users can back up or restore study data. It also explains that <code>Export to Files</code> is the preferred choice for a real backup that can be reached later in Files or iCloud Drive, while app storage is intended only for local in-app snapshots.</p>
+    <p>Main actions:</p>
+    <ul>
+    <li><code>Restore</code>: restores previously saved app data when available.</li>
+    <li><code>Save in App</code>: stores a local in-app snapshot.</li>
+    <li><code>Export to Files</code>: exports a backup to a user-reachable location such as Files or iCloud Drive.</li>
+    <li><code>Close</code>: closes the backup dialog and returns to the Utilities screen.</li>
+    </ul>
+    <a id="commentary-library-setup" class="anchor-target"></a><h4>Commentary Library Setup</h4>
+<p class="toc-back"><a href="#toc-commentary-library-setup">Back to TOC</a></p>
+    <p>The <code>Commentary Library Setup</code> button opens the commentary library screen.</p>
+    <p>Purpose:</p>
+    <ul>
+    <li>Helps the user set up commentary resources.</li>
+    <li>Provides access to commentary-library preparation and management.</li>
+    <li>Supports later use of commentary tools throughout the app.</li>
+    </ul>
+    <a id="commentary-instructions" class="anchor-target"></a><h4>Commentary Instructions</h4>
+<p class="toc-back"><a href="#toc-commentary-instructions">Back to TOC</a></p>
+    <p>The <code>Commentary Instructions</code> button opens help information for commentary features.</p>
+    <p>Purpose:</p>
+    <ul>
+    <li>Explains how commentary tools work.</li>
+    <li>Helps users understand setup and use before beginning.</li>
+    <li>Serves as a quick help reference for commentary workflows.</li>
+    </ul>
+    <p>This instruction area explains that Biblical Heritage uses an EPUB-first commentary approach, recommends downloading files to a normal browsable folder, explains the use of <code>Commentary Library Setup</code>, and describes how <code>Choose Sync Base</code>, <code>Import EPUB/PDF</code>, and <code>Sync Now</code> work together.</p>
+    <a id="commentary-block-sharing" class="anchor-target"></a><h4>Commentary Block Sharing</h4>
+<p class="toc-back"><a href="#toc-commentary-block-sharing">Back to TOC</a></p>
+    <p>The <code>Commentary Block Sharing</code> button opens tools for sharing commentary blocks.</p>
+    <p>Purpose:</p>
+    <ul>
+    <li>Supports sharing commentary material in a structured format.</li>
+    <li>Helps users move commentary blocks between people or devices where supported.</li>
+    <li>Assists collaborative study and shared resource use.</li>
+    </ul>
+    <p>The Commentary Block Sharing dialog is intended for bulk sharing of commentary blocks.</p>
+    <p>Main actions:</p>
+    <ul>
+    <li><code>Export All</code>: exports commentary block content for sharing or transfer.</li>
+    <li><code>Import Clipboard</code>: imports commentary block text that has already been copied to the clipboard.</li>
+    <li><code>Close</code>: closes the dialog and returns to the Utilities screen.</li>
+    </ul>
+    <p>Important behavior:</p>
+    <ul>
+    <li>Import is append-only.</li>
+    <li>Imported commentary blocks do not overwrite existing notes.</li>
+    <li>A user can copy shared block text to the clipboard first, then select <code>Import Clipboard</code>.</li>
+    </ul>
+    <a id="community-links" class="anchor-target"></a><h4>Community Links</h4>
+<p class="toc-back"><a href="#toc-community-links">Back to TOC</a></p>
+    <p>The <code>Community Links</code> button opens web or community-related links connected with Biblical Heritage.</p>
+    <p>Purpose:</p>
+    <ul>
+    <li>Provides quick access to related online resources.</li>
+    <li>Helps users find community pages, connected sites, or shared information sources.</li>
+    </ul>
+    <p>The Community Links dialog provides quick reference information for the main Biblical Heritage website and the sharing community.</p>
+    <p>It includes:</p>
+    <ul>
+    <li><code>BiblicalHeritage.net</code>, described as the main public home for resources, tutorials, downloads, privacy information, and shared study material.</li>
+    <li><code>Facebook Community</code>, described as a place where users may exchange study lists, commentary material, and future curated resources.</li>
+    <li>a note explaining that shared <code>#tag</code> and <code>tag</code> lists may include an identifying header for clarity and referral to BiblicalHeritage.net, while the app can still import the list content even if that header has been removed.</li>
+    </ul>
+    <p>Main actions:</p>
+    <ul>
+    <li><code>Copy Website</code>: copies the website information or website link.</li>
+    <li><code>Copy Community Note</code>: copies the community-sharing note text.</li>
+    <li><code>Close</code>: closes the dialog and returns to the Utilities screen.</li>
+    </ul>
+    <a id="support-biblical-heritage" class="anchor-target"></a><h4>Support Biblical Heritage</h4>
+<p class="toc-back"><a href="#toc-support-biblical-heritage">Back to TOC</a></p>
+    <p>The <code>Support Biblical Heritage</code> button opens the support or donation area.</p>
+    <p>Purpose:</p>
+    <ul>
+    <li>Provides access to ways of supporting the project.</li>
+    <li>Helps users reach donation or support information from within the app.</li>
+    </ul>
+    <a id="open-bible-explorer" class="anchor-target"></a><h4>Open Bible Explorer</h4>
+<p class="toc-back"><a href="#toc-open-bible-explorer">Back to TOC</a></p>
+    <p>The <code>Open Bible Explorer</code> button opens the main Bible reading and study screen.</p>
+    <p>Purpose:</p>
+    <ul>
+    <li>Returns the user to the main reading environment.</li>
+    <li>Provides a direct path from Utilities back into study mode.</li>
+    </ul>
+    <a id="utilities-summary" class="anchor-target"></a><h3>Utilities Summary</h3>
+<p class="toc-back"><a href="#toc-utilities-summary">Back to TOC</a></p>
+    <p>The Utilities screen gathers together setup tools, backup tools, commentary-library setup, commentary help, commentary sharing, community links, and support options. It also includes a direct button for opening Bible Explorer when the user is ready to return to reading and study. Some tools, such as Church AutoMute, may currently serve as placeholder or future-version areas, while others already support active workflows such as commentary import, backup, and sharing.</p>
+    <figure class="manual-figure">
+  <img src="manual_images/sorted/38-commentary-block-sharing.png" alt="Commentary Block Sharing">
+  <figcaption>Commentary Block Sharing</figcaption>
+</figure>
+    <figure class="manual-figure">
+  <img src="manual_images/sorted/39-community-links.png" alt="Community Links">
+  <figcaption>Community Links</figcaption>
+</figure>
+    <a id="importing-commentary-files" class="anchor-target"></a><h2>Importing Commentary Files</h2>
+<p class="toc-back"><a href="#toc-importing-commentary-files">Back to TOC</a></p>
+    <p>Biblical Heritage #StudyBible supports importing commentary and research files for personal study use.</p>
+    <p>When the same material is available in both formats, EPUB is recommended over PDF. EPUB is generally better for reading flow, paragraph handling, navigation, and future commentary features inside the app.</p>
+    <a id="important-caution" class="anchor-target"></a><h3>Important Caution</h3>
+<p class="toc-back"><a href="#toc-important-caution">Back to TOC</a></p>
+    <p>Users are responsible for making sure they have the legal right or permission to download, store, import, and use any files added to the app.</p>
+    <p>Biblical Heritage #StudyBible does not include third-party commentary files and does not grant permission to use copyrighted works. The app only provides tools for importing files the user has lawfully obtained.</p>
+    <a id="example-using-the-egw-writings-website" class="anchor-target"></a><h3>Example Using the EGW Writings Website</h3>
+<p class="toc-back"><a href="#toc-example-using-the-egw-writings-website">Back to TOC</a></p>
+    <p>One clear example is the EGW Writings website. A user may visit the EGW Writings website, locate EPUB files that are available there for lawful personal use, download those EPUB files to the device, and then import them into Biblical Heritage #StudyBible.</p>
+    <p>This example is only meant to show the import process. Users should still make sure they understand and respect the terms, permissions, and rights connected with any file they choose to download and use.</p>
+    <p>The same import method can also be used for other EPUB or PDF files of the user's own choosing.</p>
+    <a id="commentary-and-research" class="anchor-target"></a><h3>Commentary And Research</h3>
+<p class="toc-back"><a href="#toc-commentary-and-research">Back to TOC</a></p>
+    <p>The app separates imported files into two different library types: <code>Commentary</code> and <code>Research</code>.</p>
+    <p><code>Commentary</code> is intended for BC commentary volumes that are recognized by the app and connected to Bible-book ranges. These files are used as structured commentary sources for the commentary-reading workflow.</p>
+    <p><code>Research</code> is intended for other imported EPUB or PDF books that do not function as the built-in BC commentary set. These may still be useful for study, reference, comparison, and personal research, but they are handled separately from the commentary library.</p>
+    <p>This difference matters when choosing files to import:</p>
+    <ul>
+    <li>Files recognized as BC commentary volumes are routed into <code>Commentary Library</code>.</li>
+    <li>Other EPUB or PDF books are routed into <code>Research Library</code>.</li>
+    <li>A user is not limited to commentary volumes only. General study books, reference books, and other EPUB or PDF materials may still be imported, but they may appear in the research section rather than the commentary section.</li>
+    <li>If a user expects a file to behave like a BC commentary volume, the file should match the recognized commentary pattern used by the app.</li>
+    </ul>
+    <a id="recommended-workflow" class="anchor-target"></a><h3>Recommended Workflow</h3>
+<p class="toc-back"><a href="#toc-recommended-workflow">Back to TOC</a></p>
+    <ul class="steps">
+    <li>Download the commentary or study files to a normal folder such as <code>Downloads</code>, <code>Desktop</code>, or another folder that is easy to browse.</li>
+    <li>If possible, choose EPUB files rather than PDF files.</li>
+    <li>Open <code>Utilities</code>.</li>
+    <li>Select <code>Commentary Library Setup</code>.</li>
+    <li>If you want the library mirrored to a cloud-backed location, select <code>Choose Sync Base</code>.</li>
+    <li>Choose a base folder of your own choice. You may name this base folder anything you like, such as <code>StudyBible Library</code> or <code>Commentary Sync</code>.</li>
+    <li>The app automatically creates the managed subfolders <code>commentary_library</code> and <code>research_library</code> inside that chosen base folder.</li>
+    <li>Select <code>Import EPUB/PDF</code>.</li>
+    <li>Browse to the files you downloaded and select them.</li>
+    <li>BC commentary volumes are routed automatically into <code>Commentary Library</code>.</li>
+    <li>Other EPUB or PDF books are routed automatically into <code>Research Library</code>.</li>
+    <li>The app copies imported files into its managed library, and the original source files remain unchanged.</li>
+    <li>If sync is configured, select <code>Sync Now</code> to mirror the managed library to the chosen sync base.</li>
+    </ul>
+    <a id="managing-files-from-the-library-screen" class="anchor-target"></a><h3>Managing Files From The Library Screen</h3>
+<p class="toc-back"><a href="#toc-managing-files-from-the-library-screen">Back to TOC</a></p>
+    <p>The Commentary Library screen also allows the user to manage imported files after they have been added.</p>
+    <ul>
+    <li>Individual files can be removed directly from the library screen.</li>
+    <li>Clearing or deleting a file removes the managed app copy from the commentary or research library.</li>
+    <li>Removing a file does not change the user's original source file that was downloaded or stored elsewhere.</li>
+    </ul>
+    <a id="choose-sync-base" class="anchor-target"></a><h3>Choose Sync Base</h3>
+<p class="toc-back"><a href="#toc-choose-sync-base">Back to TOC</a></p>
+    <p><code>Choose Sync Base</code> lets the user select a base folder for cloud-backed or shared library syncing.</p>
+    <p>This is the top-level folder the user chooses for mirrored library storage. The app then creates and maintains the subfolders <code>commentary_library</code> and <code>research_library</code> inside that location.</p>
+    <p>This is useful when the user wants the managed library copied into a location backed by OneDrive, iCloud Drive, or another synced folder system.</p>
+    <a id="sync-now" class="anchor-target"></a><h3>Sync Now</h3>
+<p class="toc-back"><a href="#toc-sync-now">Back to TOC</a></p>
+    <p><code>Sync Now</code> updates the managed library in the selected sync base.</p>
+    <p>This can:</p>
+    <ul>
+    <li>mirror imported commentary files into the sync base</li>
+    <li>mirror imported research files into the sync base</li>
+    <li>pull down matching files from the sync base when used on another device with the same synced folder</li>
+    </ul>
+    <p><code>Sync Now</code> works with the app's managed library copies. It does not change the user's original downloaded source files.</p>
+    <a id="notes" class="anchor-target"></a><h3>Notes</h3>
+<p class="toc-back"><a href="#toc-notes">Back to TOC</a></p>
+    <ul>
+    <li>The user may choose the name of the base sync folder.</li>
+    <li>The app itself creates and uses the managed subfolder names <code>commentary_library</code> and <code>research_library</code>.</li>
+    <li>Commentary mode and research mode are kept separate inside the managed library structure.</li>
+    </ul>
+    <figure class="manual-figure">
+  <img src="manual_images/sorted/21-commentary-library-research.png" alt="Commentary Library And Research Library">
+  <figcaption>Commentary Library And Research Library</figcaption>
+</figure>
+    <a id="bible-explorer-2" class="anchor-target"></a><h2>Bible Explorer</h2>
+<p class="toc-back"><a href="#toc-bible-explorer-2">Back to TOC</a></p>
+    <p>Bible Explorer is the main reading and study screen of Biblical Heritage #StudyBible.</p>
+    <p>This is the central place where the user reads Scripture, moves between passages, opens study tools, adjusts reading size, and works with verse-based study features.</p>
+    <p>At the top of the screen, the current reference is shown in the center. In the example shown, the screen is displaying <code>Genesis 1:6</code>, with the book title and chapter heading visible above the passage text.</p>
+    <p>The main body of the screen shows the Bible text itself. Verse numbers appear at the left of each verse, and the reading area is designed for direct study, selection, and navigation.</p>
+    <p>The top bar contains quick access to navigation, search, tags, topics, and help. The bottom bar contains quick access to history, font-size adjustment, commentary, mode controls, and settings-related tools.</p>
+    <a id="most-important-sharing-feature" class="anchor-target"></a><h3>Most Important Sharing Feature</h3>
+<p class="toc-back"><a href="#toc-most-important-sharing-feature">Back to TOC</a></p>
+    <p>One of the most important controls on the Bible Explorer screen is the <code>#</code> tag feature.</p>
+    <p>In the current interface, this appears as the tag button in the top bar. This feature is especially important because it supports Bible sharing and group study workflows.</p>
+    <p><code># tags</code> are used to collect and organize verse lists. They are especially useful for:</p>
+    <ul>
+    <li>building personal or group study lists</li>
+    <li>saving sets of verses for later review</li>
+    <li>sharing verse collections with others</li>
+    <li>preparing material that can later be imported into other parts of the app</li>
+    </ul>
+    <p>The app's own help text describes <code># tags</code> as the starting point for group work. They let the user gather Scriptures first, share the list with others, and later turn that list into memory drills, study groups, or a <code>$tag</code> presentation chain when needed.</p>
+    <p>This makes the <code>#</code> tag feature one of the most important sharing tools in Bible Explorer.</p>
+    <a id="bible-explorer-summary" class="anchor-target"></a><h3>Bible Explorer Summary</h3>
+<p class="toc-back"><a href="#toc-bible-explorer-summary">Back to TOC</a></p>
+    <p>Bible Explorer is the main Scripture-reading screen. It combines the Bible text itself with navigation and study controls in the top and bottom bars. For many users, the most important sharing feature on this screen is the <code>#</code> tag tool, because it allows verse lists to be collected, organized, shared, and reused in other study workflows.</p>
+    <figure class="manual-figure">
+  <img src="manual_images/sorted/01-bible-explorer-main-genesis.png" alt="Bible Explorer Main Screen">
+  <figcaption>Bible Explorer Main Screen</figcaption>
+</figure>
+    <a id="top-bar-back-and-search" class="anchor-target"></a><h3>Top Bar: Back And Search</h3>
+<p class="toc-back"><a href="#toc-top-bar-back-and-search">Back to TOC</a></p>
+    <p>The left side of the top bar begins with two important controls: <code>Back</code> and <code>Search</code>.</p>
+    <a id="back" class="anchor-target"></a><h4>Back</h4>
+<p class="toc-back"><a href="#toc-back">Back to TOC</a></p>
+    <p>The back arrow returns the user to the previous screen.</p>
+    <p>In normal use, this is the quickest way to leave Bible Explorer and return to the prior area of the app.</p>
+    <a id="search" class="anchor-target"></a><h4>Search</h4>
+<p class="toc-back"><a href="#toc-search">Back to TOC</a></p>
+    <p>The search button opens the <code>Verse Search</code> screen.</p>
+    <p>Verse Search allows the user to search for words, phrases, and patterns in Scripture. It also includes tools for narrowing the search to a selected section of the Bible.</p>
+    <a id="verse-search-screen" class="anchor-target"></a><h3>Verse Search Screen</h3>
+<p class="toc-back"><a href="#toc-verse-search-screen">Back to TOC</a></p>
+    <p>The Verse Search screen includes:</p>
+    <ul>
+    <li>a main search field</li>
+    <li>a <code>Section Filter</code></li>
+    <li>search tips shown on the screen</li>
+    <li>helper buttons such as <code>AND</code>, <code>OR</code>, <code>NOT</code>, parentheses, <code>Reset</code>, and <code>Keyboard</code></li>
+    </ul>
+    <figure class="manual-figure">
+  <img src="manual_images/sorted/02-verse-search-empty.png" alt="Verse Search">
+  <figcaption>Verse Search</figcaption>
+</figure>
+    <figure class="manual-figure">
+  <img src="manual_images/sorted/03-verse-search-section-filter.png" alt="Verse Search Section Filter">
+  <figcaption>Verse Search Section Filter</figcaption>
+</figure>
+    <a id="how-to-narrow-a-search" class="anchor-target"></a><h3>How To Narrow A Search</h3>
+<p class="toc-back"><a href="#toc-how-to-narrow-a-search">Back to TOC</a></p>
+    <p>Users can narrow a search in several ways.</p>
+    <a id="1-search-for-an-exact-phrase" class="anchor-target"></a><h4>1. Search for an exact phrase</h4>
+<p class="toc-back"><a href="#toc-1-search-for-an-exact-phrase">Back to TOC</a></p>
+    <p>Use quotation marks when searching for a phrase.</p>
+    <p>Example:</p>
+    <p><code>&quot;in the beginning&quot;</code></p>
+    <p>This helps the app look for the exact phrase instead of separate individual words.</p>
+    <a id="2-use-the-section-filter" class="anchor-target"></a><h4>2. Use the section filter</h4>
+<p class="toc-back"><a href="#toc-2-use-the-section-filter">Back to TOC</a></p>
+    <p>The <code>Section Filter</code> lets the user limit the search to a selected part of the Bible instead of searching the whole text.</p>
+    <p>Examples include:</p>
+    <ul>
+    <li><code>All</code></li>
+    <li><code>Pentateuch</code></li>
+    <li><code>History</code></li>
+    <li><code>Poetry</code></li>
+    <li><code>Major Prophets</code></li>
+    <li><code>Minor Prophets</code></li>
+    <li><code>Gospels</code></li>
+    <li><code>Acts</code></li>
+    <li><code>Pauline Epistles</code></li>
+    <li><code>General Epistles</code></li>
+    <li><code>Revelation</code></li>
+    </ul>
+    <p>This is one of the easiest ways to reduce very broad search results.</p>
+    <a id="3-use-a-wildcard" class="anchor-target"></a><h4>3. Use a wildcard</h4>
+<p class="toc-back"><a href="#toc-3-use-a-wildcard">Back to TOC</a></p>
+    <p>The search screen allows the use of <code>*</code> as a wildcard.</p>
+    <p>This can help when the user wants to search for a word pattern rather than only one exact spelling.</p>
+    <a id="4-use-logical-search-terms" class="anchor-target"></a><h4>4. Use logical search terms</h4>
+<p class="toc-back"><a href="#toc-4-use-logical-search-terms">Back to TOC</a></p>
+    <p>The search screen supports logical operators:</p>
+    <ul>
+    <li><code>AND</code></li>
+    <li><code>OR</code></li>
+    <li><code>NOT</code></li>
+    </ul>
+    <p>These can be used to combine or narrow ideas in the search.</p>
+    <p>Examples:</p>
+    <ul>
+    <li><code>faith AND works</code></li>
+    <li><code>king OR kingdom</code></li>
+    <li><code>spirit NOT evil</code></li>
+    </ul>
+    <a id="5-use-parentheses" class="anchor-target"></a><h4>5. Use parentheses</h4>
+<p class="toc-back"><a href="#toc-5-use-parentheses">Back to TOC</a></p>
+    <p>Parentheses help group parts of a more complex search.</p>
+    <p>This is useful when combining multiple ideas into a single search pattern.</p>
+    <a id="6-reset-the-search" class="anchor-target"></a><h4>6. Reset the search</h4>
+<p class="toc-back"><a href="#toc-6-reset-the-search">Back to TOC</a></p>
+    <p>The <code>Reset</code> button clears the active search pattern so the user can begin again.</p>
+    <a id="search-tips" class="anchor-target"></a><h3>Search Tips</h3>
+<p class="toc-back"><a href="#toc-search-tips">Back to TOC</a></p>
+    <p>The on-screen guidance explains that:</p>
+    <ul>
+    <li>quotation marks can be used for phrases</li>
+    <li><code>*</code> can be used for wildcard searching</li>
+    <li><code>AND</code>, <code>OR</code>, and <code>NOT</code> can be used for logic</li>
+    <li>searches are case-insensitive</li>
+    </ul>
+    <a id="search-recommendation" class="anchor-target"></a><h3>Search Recommendation</h3>
+<p class="toc-back"><a href="#toc-search-recommendation">Back to TOC</a></p>
+    <p>If a search returns too many results, the best ways to narrow it are:</p>
+    <ul class="steps">
+    <li>use quotation marks for an exact phrase</li>
+    <li>apply a <code>Section Filter</code></li>
+    <li>add additional terms with <code>AND</code></li>
+    <li>exclude unwanted results with <code>NOT</code></li>
+    </ul>
+    <p>This makes Verse Search much more useful for focused study.</p>
+    <a id="verse-picker" class="anchor-target"></a><h3>Verse Picker</h3>
+<p class="toc-back"><a href="#toc-verse-picker">Back to TOC</a></p>
+    <p>The center reference area in the Bible Explorer top bar can be selected to open the verse picker.</p>
+    <p>The verse picker is used to move directly to another part of Scripture by choosing a <code>Book</code>, <code>Chapter</code>, and <code>Verse</code>.</p>
+    <p>At the top of the picker, the screen title reads:</p>
+    <p><code>Select Book / Chapter / Verse</code></p>
+    <p>This tells the user that the picker is designed for direct navigation to a precise Bible location.</p>
+    <a id="how-the-verse-picker-works" class="anchor-target"></a><h3>How The Verse Picker Works</h3>
+<p class="toc-back"><a href="#toc-how-the-verse-picker-works">Back to TOC</a></p>
+    <p>The picker is a step-by-step selection tool:</p>
+    <ul class="steps">
+    <li>choose the <code>Book</code></li>
+    <li>choose the <code>Chapter</code></li>
+    <li>choose the <code>Verse</code></li>
+    </ul>
+    <p>After the desired reference is selected, the app can move directly to that passage in Bible Explorer.</p>
+    <p>This makes the picker especially useful when:</p>
+    <ul>
+    <li>jumping to a known Bible reference</li>
+    <li>moving to a passage named in a sermon or study</li>
+    <li>navigating quickly without scrolling</li>
+    <li>switching between distant passages in different parts of the Bible</li>
+    </ul>
+    <a id="color-groupings-in-the-book-list" class="anchor-target"></a><h3>Color Groupings In The Book List</h3>
+<p class="toc-back"><a href="#toc-color-groupings-in-the-book-list">Back to TOC</a></p>
+    <p>The book names in the picker are shown with different background colors.</p>
+    <p>These colors are used to visually group books of the Bible into related sections so the user can recognize broad divisions more quickly.</p>
+    <p>The colors are not the main function of the picker, but they help the user see the structure of Scripture at a glance and make navigation easier.</p>
+    <p>In practice, the color groupings help distinguish major sections such as:</p>
+    <ul>
+    <li>early books of the Old Testament</li>
+    <li>historical books</li>
+    <li>wisdom and poetry books</li>
+    <li>prophetic books</li>
+    <li>Gospels and other New Testament sections</li>
+    <li>epistles and later New Testament books</li>
+    </ul>
+    <p>The exact colors may vary depending on the app's configured group-color data, but the purpose remains the same: books that belong to the same broad section are shown with a shared visual color grouping.</p>
+    <a id="why-the-color-groupings-help" class="anchor-target"></a><h3>Why The Color Groupings Help</h3>
+<p class="toc-back"><a href="#toc-why-the-color-groupings-help">Back to TOC</a></p>
+    <p>The grouped colors make it easier to:</p>
+    <ul>
+    <li>spot related books quickly</li>
+    <li>recognize Old Testament and New Testament transitions more easily</li>
+    <li>move through large parts of the Bible with less visual confusion</li>
+    <li>build a mental map of where books belong</li>
+    </ul>
+    <a id="verse-picker-summary" class="anchor-target"></a><h3>Verse Picker Summary</h3>
+<p class="toc-back"><a href="#toc-verse-picker-summary">Back to TOC</a></p>
+    <p>The verse picker is the main direct-navigation tool for choosing a Bible location by book, chapter, and verse. Its grouped book colors are intended to help users recognize major Bible sections quickly while selecting the passage they want.</p>
+    <figure class="manual-figure">
+  <img src="manual_images/sorted/04-verse-picker.png" alt="Verse Picker">
+  <figcaption>Verse Picker</figcaption>
+</figure>
+    <a id="help-button" class="anchor-target"></a><h3>Help Button</h3>
+<p class="toc-back"><a href="#toc-help-button">Back to TOC</a></p>
+    <p>The <code>?</code> button in the top-right corner opens the interaction help dialog for Bible Explorer.</p>
+    <p>On desktop systems, this appears as <code>Desktop Interaction Help</code>.</p>
+    <p>This help screen explains how selection and range actions work while reading the Bible text.</p>
+    <a id="desktop-interaction-help" class="anchor-target"></a><h3>Desktop Interaction Help</h3>
+<p class="toc-back"><a href="#toc-desktop-interaction-help">Back to TOC</a></p>
+    <p>The desktop help dialog explains the normal interaction pattern for macOS, Windows, and Linux.</p>
+    <p>It describes the following actions:</p>
+    <ul class="steps">
+    <li>Left click a verse to focus or select that verse.</li>
+    <li>Left click the same verse again to open <code>Verse Actions</code> for the whole verse.</li>
+    <li>Right click a word to set the start of a word or range selection.</li>
+    <li>Right click another word to set the end of the selection.</li>
+    <li>Right click inside the highlighted selection to open <code>Range Actions</code>.</li>
+    <li>Left click outside the selection to clear it and return to normal verse navigation.</li>
+    <li>A single-word selection may show a Strong's shortcut when that word has a mapped Strong's number.</li>
+    </ul>
+    <a id="why-the-help-button-matters" class="anchor-target"></a><h3>Why The Help Button Matters</h3>
+<p class="toc-back"><a href="#toc-why-the-help-button-matters">Back to TOC</a></p>
+    <p>The help dialog is important because Bible Explorer includes several interaction modes that are not obvious at first glance.</p>
+    <p>It helps the user learn:</p>
+    <ul>
+    <li>how to select a verse</li>
+    <li>how to open verse actions</li>
+    <li>how to create a word or verse range</li>
+    <li>how to open range actions</li>
+    <li>how Strong's shortcuts may appear during word selection</li>
+    </ul>
+    <a id="help-button-summary" class="anchor-target"></a><h3>Help Button Summary</h3>
+<p class="toc-back"><a href="#toc-help-button-summary">Back to TOC</a></p>
+    <p>Use the <code>?</code> button whenever you need a quick reminder of how to interact with the Bible text. It is especially helpful when learning verse selection, range selection, and desktop study actions for the first time.</p>
+    <a id="verse-selection-and-range-selection" class="anchor-target"></a><h3>Verse Selection And Range Selection</h3>
+<p class="toc-back"><a href="#toc-verse-selection-and-range-selection">Back to TOC</a></p>
+    <p>Bible Explorer supports both single-verse selection and range selection.</p>
+    <p>These two kinds of selection are related, but they are used for different purposes.</p>
+    <a id="selecting-a-verse" class="anchor-target"></a><h4>Selecting A Verse</h4>
+<p class="toc-back"><a href="#toc-selecting-a-verse">Back to TOC</a></p>
+    <p>To select a verse, tap or click the verse once so it becomes the current focus.</p>
+    <p>Tapping or clicking the same verse again opens the actions for that single verse.</p>
+    <p>Single-verse actions are useful when the user wants to work with one verse by itself.</p>
+    <a id="selecting-a-range" class="anchor-target"></a><h4>Selecting A Range</h4>
+<p class="toc-back"><a href="#toc-selecting-a-range">Back to TOC</a></p>
+    <p>To select a range, begin at the first word of the desired section and then complete the selection at the last word.</p>
+    <p>On desktop systems, this is done by setting the start and end of the selection as described in the help dialog. In practical use, the result is that the text between the first and last selected words becomes highlighted as one range.</p>
+    <p>This allows the user to work with several words or verses together instead of only one verse at a time.</p>
+    <a id="range-actions" class="anchor-target"></a><h4>Range Actions</h4>
+<p class="toc-back"><a href="#toc-range-actions">Back to TOC</a></p>
+    <p>When the highlighted range is tapped or clicked again, the app opens a <code>Range Actions</code> menu.</p>
+    <p>This menu can include many useful actions, such as:</p>
+    <ul>
+    <li><code>Copy No Citation</code></li>
+    <li><code>Copy With Citation</code></li>
+    <li><code>Highlight</code></li>
+    <li><code>Clear Markup</code></li>
+    <li><code>Add # Tag</code></li>
+    <li><code>Add $ Tag</code></li>
+    <li><code>Add to Memory</code></li>
+    <li><code>Reset Range</code></li>
+    </ul>
+    <p>This makes range selection a powerful way to work with a section of text as one unit.</p>
+    <p>All range selections support export in multiple forms, along with markup-related actions.</p>
+    <p>In practical terms, this means a selected range can still be:</p>
+    <ul>
+    <li>copied without citation</li>
+    <li>copied with citation</li>
+    <li>highlighted</li>
+    <li>cleared of markup</li>
+    <li>added to tags</li>
+    <li>sent into Bible Memory</li>
+    </ul>
+    <p>So even when Strong's is unavailable for a larger range, the range can still be exported and marked up in useful study-friendly ways.</p>
+    <figure class="manual-figure">
+  <img src="manual_images/sorted/35-range-selection.png" alt="Range Selection">
+  <figcaption>Range Selection</figcaption>
+</figure>
+    <a id="highlighting-a-selection" class="anchor-target"></a><h4>Highlighting A Selection</h4>
+<p class="toc-back"><a href="#toc-highlighting-a-selection">Back to TOC</a></p>
+    <p>If the user chooses <code>Highlight</code>, the app opens the <code>Apply Highlight</code> dialog.</p>
+    <p>This dialog expects a verse selection before a highlight can be applied. If no usable verse selection is active yet, the app reminds the user to select a verse first.</p>
+    <p>The <code>Edit Groups</code> button on that dialog opens <code>Markup Settings</code>, where the user can create and manage highlight groups.</p>
+    <p>In <code>Markup Settings</code>, the user can:</p>
+    <ul>
+    <li>choose a highlight color</li>
+    <li>name the group</li>
+    <li>add the group for future highlighting</li>
+    </ul>
+    <p>This makes it possible to organize highlights by purpose, such as doctrine, prophecy, promises, or teaching use.</p>
+    <figure class="manual-figure">
+  <img src="manual_images/sorted/36-apply-highlight.png" alt="Apply Highlight">
+  <figcaption>Apply Highlight</figcaption>
+</figure>
+    <figure class="manual-figure">
+  <img src="manual_images/sorted/34-markup-settings.png" alt="Markup Settings">
+  <figcaption>Markup Settings</figcaption>
+</figure>
+    <a id="why-strong-s-may-be-grayed-out" class="anchor-target"></a><h4>Why Strong's May Be Grayed Out</h4>
+<p class="toc-back"><a href="#toc-why-strong-s-may-be-grayed-out">Back to TOC</a></p>
+    <p>In a range-selection menu, the <code>Strong's</code> option may appear grayed out.</p>
+    <p>This is normal when the current selection is a range rather than a single mapped word.</p>
+    <p>Strong's lookups are word-based. They are intended for a single original-language word that has a mapped Strong's number. When several words or verses are selected together, there is no single Strong's entry that clearly applies to the whole range, so the Strong's action is disabled.</p>
+    <p>However, if the selected range is only one word long, the app may still allow the Strong's shortcut.</p>
+    <p>In that case, the range is effectively acting like a single-word selection, so the Strong's dictionary entry can still be opened.</p>
+    <p>In other words:</p>
+    <ul>
+    <li>single-word selection may allow Strong's lookup</li>
+    <li>multi-word or multi-verse range selection may not</li>
+    </ul>
+    <figure class="manual-figure">
+  <img src="manual_images/sorted/37-strongs-single-word-range.png" alt="Strong's From A One-Word Range">
+  <figcaption>Strong's From A One-Word Range</figcaption>
+</figure>
+    <a id="topic-picker" class="anchor-target"></a><h3>Topic Picker</h3>
+<p class="toc-back"><a href="#toc-topic-picker">Back to TOC</a></p>
+    <p>The <code>Topics</code> control opens the Topic Picker.</p>
+    <p>The Topic Picker is a guided topic-navigation tool that organizes Scripture topics into a large browsable structure. In the example shown, the app reports <code>Topics · 2646</code>, indicating that the user can browse thousands of indexed topics.</p>
+    <p>The Topic Picker is designed to help the user narrow a large topic list into a smaller and more manageable selection before opening a specific topic.</p>
+    <a id="how-to-narrow-the-topic-list" class="anchor-target"></a><h3>How To Narrow The Topic List</h3>
+<p class="toc-back"><a href="#toc-how-to-narrow-the-topic-list">Back to TOC</a></p>
+    <p>The Topic Picker can be narrowed in stages.</p>
+    <a id="1-start-with-a-major-group" class="anchor-target"></a><h4>1. Start with a major group</h4>
+<p class="toc-back"><a href="#toc-1-start-with-a-major-group">Back to TOC</a></p>
+    <p>At the top of the Topic Picker, broad Bible sections are shown first.</p>
+    <p>Examples include:</p>
+    <ul>
+    <li><code>Pentateuch</code></li>
+    <li><code>History</code></li>
+    <li><code>Poetry</code></li>
+    <li><code>Major Prophets</code></li>
+    <li><code>Minor Prophets</code></li>
+    <li><code>Gospels</code></li>
+    <li><code>Acts</code></li>
+    <li><code>Pauline Epistles</code></li>
+    <li><code>General Epistles</code></li>
+    <li><code>Revelation</code></li>
+    </ul>
+    <p>Choosing one of these groups narrows the available topic list to that section of Scripture.</p>
+    <a id="2-narrow-again-with-a-subgroup-or-book" class="anchor-target"></a><h4>2. Narrow again with a subgroup or book</h4>
+<p class="toc-back"><a href="#toc-2-narrow-again-with-a-subgroup-or-book">Back to TOC</a></p>
+    <p>After choosing a major group, the picker can narrow further into a smaller set.</p>
+    <p>For example, after selecting <code>Gospels</code>, the user may see:</p>
+    <ul>
+    <li><code>Matthew</code></li>
+    <li><code>Mark</code></li>
+    <li><code>Luke</code></li>
+    <li><code>John</code></li>
+    </ul>
+    <p>Selecting one of these narrows the topic list again so the user can work within that smaller portion of Scripture.</p>
+    <p>This is useful when a broad section still contains too many topics.</p>
+    <a id="3-choose-a-topic" class="anchor-target"></a><h4>3. Choose a topic</h4>
+<p class="toc-back"><a href="#toc-3-choose-a-topic">Back to TOC</a></p>
+    <p>Once the list has been narrowed by group and, if needed, by subgroup or book, the user can choose a specific topic title.</p>
+    <p>Examples shown in the screenshots include:</p>
+    <ul>
+    <li><code>The Genealogy Of Jesus</code></li>
+    <li><code>The Birth Of Jesus</code></li>
+    <li><code>The Pilgrimage Of The Magi</code></li>
+    <li><code>The Baptism Of Jesus</code></li>
+    <li><code>Jesus Begins His Ministry</code></li>
+    </ul>
+    <p>Selecting a topic causes the app to navigate to the associated Bible passage in Bible Explorer.</p>
+    <a id="returning-to-all-topics" class="anchor-target"></a><h3>Returning To All Topics</h3>
+<p class="toc-back"><a href="#toc-returning-to-all-topics">Back to TOC</a></p>
+    <p>The <code>All Topics</code> control resets the narrowed view and returns the user to the full topic list.</p>
+    <p>This is helpful when the user wants to leave the current group and begin again from the full set of topics.</p>
+    <a id="what-happens-after-you-pick-a-topic" class="anchor-target"></a><h3>What Happens After You Pick A Topic</h3>
+<p class="toc-back"><a href="#toc-what-happens-after-you-pick-a-topic">Back to TOC</a></p>
+    <p>After the user selects a topic, Bible Explorer opens the corresponding passage.</p>
+    <p>In the example shown, selecting a topic under the Gospel group leads the app to a passage in <code>Mark 2:13</code>, where the topic heading appears in the reading area.</p>
+    <p>This allows the user to move directly from topic selection into Bible reading and study.</p>
+    <a id="why-the-topic-picker-helps" class="anchor-target"></a><h3>Why The Topic Picker Helps</h3>
+<p class="toc-back"><a href="#toc-why-the-topic-picker-helps">Back to TOC</a></p>
+    <p>The Topic Picker is useful because it:</p>
+    <ul>
+    <li>provides access to a large organized topic index</li>
+    <li>helps the user narrow a very large list into smaller sections</li>
+    <li>makes topic study easier when the user does not want to search by exact reference</li>
+    <li>gives a direct path from topic selection to Bible Explorer</li>
+    </ul>
+    <a id="topic-picker-summary" class="anchor-target"></a><h3>Topic Picker Summary</h3>
+<p class="toc-back"><a href="#toc-topic-picker-summary">Back to TOC</a></p>
+    <p>The Topic Picker helps the user move through a large topic index by narrowing the list step by step. First the user chooses a major Bible section, then a smaller subgroup or book if needed, then a topic. Once a topic is selected, the app navigates directly to the related passage in Bible Explorer.</p>
+    <figure class="manual-figure">
+  <img src="manual_images/sorted/05-topic-picker-all.png" alt="Topic Picker: All Topics">
+  <figcaption>Topic Picker: All Topics</figcaption>
+</figure>
+    <figure class="manual-figure">
+  <img src="manual_images/sorted/07-topic-picker-narrowed.png" alt="Topic Picker: Narrowed">
+  <figcaption>Topic Picker: Narrowed</figcaption>
+</figure>
+    <a id="tag-lists-and-study-chains" class="anchor-target"></a><h3>Tag Lists And Study Chains</h3>
+<p class="toc-back"><a href="#toc-tag-lists-and-study-chains">Back to TOC</a></p>
+    <p>One of the most important feature areas in Bible Explorer is the tag system opened from the <code>#</code> button in the top-right area of the screen.</p>
+    <p>This area supports two major workflows:</p>
+    <ul>
+    <li><code># tags</code>: shareable verse lists for study, memory work, and group use</li>
+    <li><code>$ tags</code>: ordered study chains for sermons, teaching, and presentation flow</li>
+    </ul>
+    <p>The normal pattern is simple:</p>
+    <ul class="steps">
+    <li>gather verses with a <code>#</code> tag</li>
+    <li>share, review, or organize that list</li>
+    <li>turn the material into a <code>$</code> chain when you need ordered teaching flow, notes, or presentation slides</li>
+    </ul>
+    <p>This same study flow can also continue into <code>Bible Memory</code>. A user can collect verses with <code># tags</code>, organize and share them, import that group into Bible Memory for recall practice, or convert the same material into a <code>$</code> chain for teaching and presentation.</p>
+    <a id="tags-shareable-verse-lists" class="anchor-target"></a><h4><code>#</code> Tags: Shareable Verse Lists</h4>
+<p class="toc-back"><a href="#toc-tags-shareable-verse-lists">Back to TOC</a></p>
+    <p><code># tags</code> are the best starting point when the goal is to collect verses into a named list.</p>
+    <p>They answer the question, &quot;How do I gather, organize, and share a set of verses?&quot;</p>
+    <p>They are especially useful for:</p>
+    <ul>
+    <li>personal topical study</li>
+    <li>group Bible study</li>
+    <li>Scripture memory</li>
+    <li>sharing verse collections with other users</li>
+    <li>preparing material that may later become a <code>$</code> teaching chain</li>
+    </ul>
+    <a id="tags-teaching-and-presentation-chains" class="anchor-target"></a><h4><code>$</code> Tags: Teaching And Presentation Chains</h4>
+<p class="toc-back"><a href="#toc-tags-teaching-and-presentation-chains">Back to TOC</a></p>
+    <p><code>$ tags</code> are best when the material needs order, notes, commentary segments, or presentation flow.</p>
+    <p>They answer the question, &quot;How do I turn a verse collection into a teachable sequence with notes and presentation structure?&quot;</p>
+    <p>They are especially useful for:</p>
+    <ul>
+    <li>sermons</li>
+    <li>classes</li>
+    <li>guided topic lessons</li>
+    <li>projector or overhead presentation</li>
+    <li>slide-based teaching with notes between verses</li>
+    </ul>
+    <a id="how-the-two-work-together" class="anchor-target"></a><h4>How The Two Work Together</h4>
+<p class="toc-back"><a href="#toc-how-the-two-work-together">Back to TOC</a></p>
+    <p>For many users, <code>#</code> and <code>$</code> work together rather than separately.</p>
+    <p>A user may first gather verses with a <code>#</code> tag, then review or share that list, then import that same group into <code>Bible Memory</code> for memorization, and only later convert or rebuild the same material as a <code>$</code> chain when the study becomes a fuller lesson or presentation.</p>
+    <a id="tags-building-and-sharing-verse-lists" class="anchor-target"></a><h3><code>#</code> Tags: Building And Sharing Verse Lists</h3>
+<p class="toc-back"><a href="#toc-tags-building-and-sharing-verse-lists">Back to TOC</a></p>
+    <p>When the <code>#</code> button is selected, the app opens a tag dialog for the current verse. In the example shown, the dialog title is <code>Tags for Mark 2:10</code>.</p>
+    <p>This screen helps the user do three main things:</p>
+    <ul>
+    <li>choose or create a <code>#tag</code></li>
+    <li>save the current verse into that tag</li>
+    <li>browse and manage existing verse-list tags</li>
+    </ul>
+    <p>In simple terms, this is how to use <code># tags</code>:</p>
+    <ul class="steps">
+    <li>choose or create a <code>#tag</code></li>
+    <li>add verses into that tag as the study grows</li>
+    <li>review, export, share, or reuse that saved list later</li>
+    </ul>
+    <a id="what-tags-are-for" class="anchor-target"></a><h4>What <code>#</code> Tags Are For</h4>
+<p class="toc-back"><a href="#toc-what-tags-are-for">Back to TOC</a></p>
+    <p><code># tags</code> are designed for collecting and organizing verse lists.</p>
+    <p>They are especially useful for:</p>
+    <ul>
+    <li>personal study lists</li>
+    <li>group-study verse collections</li>
+    <li>memory verse lists</li>
+    <li>topical verse sets</li>
+    <li>simple shareable Scripture lists</li>
+    </ul>
+    <p>In practice, <code># tags</code> are often the first step in Bible sharing. A user can gather verses under one tag, share that list with other people, and later reuse the same list in Bible Memory or convert it into a <code>$</code> tag chain for teaching or presentation.</p>
+    <a id="top-controls-on-the-screen" class="anchor-target"></a><h4>Top Controls On The <code>#</code> Screen</h4>
+<p class="toc-back"><a href="#toc-top-controls-on-the-screen">Back to TOC</a></p>
+    <p>At the top of the tag dialog, several controls help the user begin working with the current verse.</p>
+    <a id="instructions" class="anchor-target"></a><h5>Instructions</h5>
+    <p>The <code>Instructions</code> button opens help for the tag system.</p>
+    <p>For <code># tags</code>, the help explains that these tags are ideal for collecting and organizing verse lists, especially for personal study, group study, memory work, topical lists, and shared reference sets.</p>
+    <a id="find-text" class="anchor-target"></a><h5>Find Text</h5>
+    <p>The <code>Find Text</code> button helps search within tag-related material.</p>
+    <p>Use it when you want to locate specific text connected with tag content more quickly.</p>
+    <a id="import-list" class="anchor-target"></a><h5>Import List</h5>
+    <p>The <code>Import List</code> button is used to bring a shared list into the app.</p>
+    <p>This is one of the main sharing features of the <code>#</code> tag system because one person can prepare a verse list and another person can import it for personal or group use.</p>
+    <p>Lists created by other users can be imported from the clipboard when they have been shared in the app's supported list format.</p>
+    <p>This makes it possible for one person to prepare a Scripture list and for another person to paste or import that same list into their own app.</p>
+    <a id="choosing-or-creating-a-tag" class="anchor-target"></a><h4>Choosing Or Creating A <code>#</code> Tag</h4>
+<p class="toc-back"><a href="#toc-choosing-or-creating-a-tag">Back to TOC</a></p>
+    <p>Near the top of the dialog, the current verse reference is shown, followed by a <code># tag</code> entry field.</p>
+    <p>The user can:</p>
+    <ul>
+    <li>type a new <code>#tag</code> name</li>
+    <li>select an existing tag</li>
+    <li>use the default tag name shown by the app</li>
+    </ul>
+    <p>Nearby controls include:</p>
+    <ul>
+    <li><code>Use</code>: applies the selected tag name as the active tag</li>
+    <li><code>Save</code>: saves the active tag choice</li>
+    <li><code>Tag Verse</code>: adds the current verse to the chosen <code>#tag</code></li>
+    </ul>
+    <p>This makes the basic workflow simple:</p>
+    <ul class="steps">
+    <li>Enter or choose a <code>#tag</code> name.</li>
+    <li>Save the current verse into that <code>#tag</code>.</li>
+    <li>Continue adding verses to grow the list.</li>
+    <li>Browse the list later for review, export, or reuse.</li>
+    </ul>
+    <a id="worked-example-soulsleep" class="anchor-target"></a><h4>Worked Example: <code>#SoulSleep</code></h4>
+<p class="toc-back"><a href="#toc-worked-example-soulsleep">Back to TOC</a></p>
+    <p>As a simple example, a user could build a tag named <code>#SoulSleep</code>.</p>
+    <p>This would create a plain verse list for passages the user wants to study in connection with that topic.</p>
+    <p>A basic workflow might look like this:</p>
+    <ul class="steps">
+    <li>Navigate to a verse the user wants to include in the study.</li>
+    <li>Open the <code>#</code> tag screen.</li>
+    <li>Type <code>#SoulSleep</code> in the tag field.</li>
+    <li>Select <code>Use</code> so <code>#SoulSleep</code> becomes the active tag.</li>
+    <li>Select <code>Save</code> to keep that tag name available in the tag list.</li>
+    <li>Select <code>Tag Verse</code> to save the current verse into the <code>#SoulSleep</code> list.</li>
+    <li>Move to the next related verse and repeat the process.</li>
+    </ul>
+    <p>Over time, the <code>#SoulSleep</code> tag becomes a collected verse list that can be reviewed, shared, exported, or used in other app tools.</p>
+    <p>After <code>Use</code> and <code>Save</code>, the screen may show <code>Default: #SoulSleep</code>, indicating that this is now the active default tag for continued tagging.</p>
+    <p>This example also shows why <code># tags</code> are often the best first step. The user does not need to build a full presentation or note sequence at the beginning. The first goal is simply to gather the relevant verses into one reusable list.</p>
+    <p>The user can continue building the list in two main ways:</p>
+    <ul>
+    <li>import a shared list created by someone else</li>
+    <li>search for new Bible text and add more matching verses to the tag</li>
+    </ul>
+    <p>This allows the same tag to grow either from shared study material or from the user's own continuing Bible study.</p>
+    <a id="step-by-step-create-and-build-a-tag" class="anchor-target"></a><h4>Step-By-Step: Create And Build A <code>#</code> Tag</h4>
+<p class="toc-back"><a href="#toc-step-by-step-create-and-build-a-tag">Back to TOC</a></p>
+    <p>Use this sequence when the goal is to create a verse list and keep adding to it.</p>
+    <ul class="steps">
+    <li>Open Bible Explorer and navigate to the first verse you want to save.</li>
+    <li>Tap the <code>#</code> button to open the tag dialog for that verse.</li>
+    <li>In the tag field, type the tag name you want to use, such as <code>#SoulSleep</code>.</li>
+    <li>Tap <code>Use</code> so that tag becomes the active working tag.</li>
+    <li>Tap <code>Save</code> so the tag name is stored in your saved tag list.</li>
+    <li>Tap <code>Tag Verse</code> to place the current verse into that tag.</li>
+    <li>Move to the next verse you want, open the <code>#</code> dialog again, and tap <code>Tag Verse</code> again while the same tag is active.</li>
+    <li>Repeat until the verse list is complete.</li>
+    </ul>
+    <p>Picture guide:</p>
+    <ul>
+    <li>Use <a href="manual_images/sorted/09-verse-search-soulsleep-results.png">manual_images/sorted/09-verse-search-soulsleep-results.png</a> to see how an active <code>#</code> tag can be used while building the list from search results.</li>
+    <li>Use <a href="manual_images/sorted/11-new-category-basicbeliefs.png">manual_images/sorted/11-new-category-basicbeliefs.png</a> if you also want to create a category for the tag.</li>
+    <li>Use <a href="manual_images/sorted/08-tag-hash-soulsleep-categorized.png">manual_images/sorted/08-tag-hash-soulsleep-categorized.png</a> to confirm that the saved tag now appears in the browse area.</li>
+    <li>Use <a href="manual_images/sorted/10-hash-list-review.png">manual_images/sorted/10-hash-list-review.png</a> to review, reorder, or export the finished list.</li>
+    </ul>
+    <a id="example-search-and-add-to-soulsleep" class="anchor-target"></a><h4>Example: Search And Add To <code>#SoulSleep</code></h4>
+<p class="toc-back"><a href="#toc-example-search-and-add-to-soulsleep">Back to TOC</a></p>
+    <p>The Verse Search screen can also be used to grow a <code>#tag</code> list directly.</p>
+    <p>In the example shown, the active tag is <code>#SoulSleep</code>, and the user searches for the phrase:</p>
+    <p><code>sleep dust awake</code></p>
+    <p>The search finds a matching verse, such as <code>Daniel 12:2</code>.</p>
+    <p>When a result includes the <code>#</code> control beside it, the user can tap that <code>#</code> to add the found verse directly to the active <code>#tag</code> list.</p>
+    <p>This makes search especially useful for topic building:</p>
+    <ul class="steps">
+    <li>Set the current <code>#tag</code>, such as <code>#SoulSleep</code>.</li>
+    <li>Search for related words or phrases.</li>
+    <li>Review the matching verses.</li>
+    <li>Tap the <code>#</code> beside a matching verse to add it to the list.</li>
+    </ul>
+    <p>This is one of the fastest ways to build a topical verse collection from search results.</p>
+    <figure class="manual-figure">
+  <img src="manual_images/sorted/09-verse-search-soulsleep-results.png" alt="Search And Add To `#SoulSleep`">
+  <figcaption>Search And Add To <code>#SoulSleep</code></figcaption>
+</figure>
+    <a id="example-creating-a-category" class="anchor-target"></a><h4>Example: Creating A Category</h4>
+<p class="toc-back"><a href="#toc-example-creating-a-category">Back to TOC</a></p>
+    <p>If the user wants to organize related tags together, a category can also be created.</p>
+    <p>For example, after creating <code>#SoulSleep</code>, the user might create a category named <code>BasicBeliefs</code>.</p>
+    <p>A simple workflow is:</p>
+    <ul class="steps">
+    <li>Open the category control on the <code>#</code> tag screen.</li>
+    <li>Choose the option to create a new category.</li>
+    <li>Enter a category name such as <code>BasicBeliefs</code>.</li>
+    <li>Select <code>Add</code>.</li>
+    </ul>
+    <p>After that, the new category can be used to group related tags together.</p>
+    <p>In this example, <code>#SoulSleep</code> could be placed under <code>BasicBeliefs</code> so it is easier to find later along with other doctrinal or study-list tags.</p>
+    <p>When the category has been applied, the browse area will show the tag under that category heading. In the example shown, <code>#SoulSleep</code> now appears under <code>Basic Beliefs</code> with its verse count, instead of remaining in the uncategorized list.</p>
+    <figure class="manual-figure">
+  <img src="manual_images/sorted/11-new-category-basicbeliefs.png" alt="Create Category">
+  <figcaption>Create Category</figcaption>
+</figure>
+    <a id="categories" class="anchor-target"></a><h4>Categories</h4>
+<p class="toc-back"><a href="#toc-categories">Back to TOC</a></p>
+    <p>The <code>Category</code> field allows a <code>#tag</code> to be placed into a category.</p>
+    <p>Categories help keep related verse lists together. For example, a user may keep separate categories for prophecy, group Bible study, memory work, or sermon preparation.</p>
+    <p>Additional tools on this part of the screen include:</p>
+    <ul>
+    <li><code>Instructions</code>: opens tag help</li>
+    <li><code>Rename current tag</code>: changes the name of the currently selected tag</li>
+    <li><code>Import local $tag group</code>: pulls verse references out of a <code>$tag</code> chain into a plain <code>#tag</code> verse list</li>
+    </ul>
+    <p>This last option is useful when a structured teaching chain needs to be turned back into a simpler shared verse list.</p>
+    <a id="browsing-existing-tags" class="anchor-target"></a><h4>Browsing Existing <code>#</code> Tags</h4>
+<p class="toc-back"><a href="#toc-browsing-existing-tags">Back to TOC</a></p>
+    <p>The lower part of the screen is the browse area for saved tags.</p>
+    <p>It includes:</p>
+    <ul>
+    <li><code>Category filter</code>: narrows the visible tags by category</li>
+    <li><code>All categories</code>: shows the complete list again</li>
+    <li><code>Search tags</code>: searches within saved tag names</li>
+    <li><code>A-&gt;Z</code>: sorts the visible list alphabetically</li>
+    </ul>
+    <p>Below the browse tools, the user sees saved tags and their verse counts. In the example shown, the list includes an uncategorized entry named <code>#SecondComing</code> with a count beside it.</p>
+    <p>This area helps the user quickly find an existing study list, review it, and continue working with it.</p>
+    <p>Each saved tag row also includes a read button on the right side. This lets the user open and review the verses saved under that tag.</p>
+    <p>This means the browse area is not only for locating saved tags. It is also the place where the user can reopen a collected verse list and read through it again as a study set.</p>
+    <p>Saved lists can be found several ways:</p>
+    <ul>
+    <li>by browsing category headings</li>
+    <li>by using the category filter</li>
+    <li>by searching for a tag name</li>
+    <li>by sorting the visible list alphabetically</li>
+    </ul>
+    <p>This makes it easier to find older study sets even when many tags have already been created.</p>
+    <figure class="manual-figure">
+  <img src="manual_images/sorted/08-tag-hash-soulsleep-categorized.png" alt="Categorized `#` Tag">
+  <figcaption>Categorized <code>#</code> Tag</figcaption>
+</figure>
+    <a id="reviewing-a-saved-list" class="anchor-target"></a><h4>Reviewing A Saved <code>#</code> List</h4>
+<p class="toc-back"><a href="#toc-reviewing-a-saved-list">Back to TOC</a></p>
+    <p>When the user opens a saved <code>#</code> list, the app shows the verses collected under that tag as a reviewable set.</p>
+    <p>In the example shown, the list is <code>#SoulSleep</code>, and the screen title shows:</p>
+    <p><code>#SoulSleep • 1 verses</code></p>
+    <p>From this screen, the user can do more than simply read the saved verses. The list can also be managed for study, sharing, and presentation use.</p>
+    <a id="main-actions-on-the-review-screen" class="anchor-target"></a><h4>Main Actions On The Review Screen</h4>
+<p class="toc-back"><a href="#toc-main-actions-on-the-review-screen">Back to TOC</a></p>
+    <a id="slide-order" class="anchor-target"></a><h5>Slide Order</h5>
+    <p>The <code>Slide Order</code> area lets the user adjust the order of the saved verses.</p>
+    <p>Up and down arrows can be used to move selected entries higher or lower in the list. This helps when the user wants verses to appear in a teaching order rather than only in the order they were first added.</p>
+    <a id="make-default" class="anchor-target"></a><h5>Make Default</h5>
+    <p>The <code>Make default</code> control sets the selected <code>#</code> list as the default list for further tagging.</p>
+    <p>This is especially useful when the user plans to continue adding more verses to the same study topic without reselecting the tag each time.</p>
+    <a id="video-presentation-view" class="anchor-target"></a><h5>Video / Presentation View</h5>
+    <p>The review screen also includes a presentation-style view that can display the saved list as large text slides.</p>
+    <p>This is an important use for teachers, speakers, and group leaders who present Bible material on overhead screens, projectors, or other large displays.</p>
+    <p>In this mode, each saved verse can be shown clearly as a readable slide for group viewing.</p>
+    <a id="delete-a-single-verse" class="anchor-target"></a><h5>Delete A Single Verse</h5>
+    <p>Each saved verse row includes a delete control.</p>
+    <p>This allows the user to remove one verse from the list without deleting the entire tag.</p>
+    <a id="delete-the-entire-list" class="anchor-target"></a><h5>Delete The Entire <code>#</code> List</h5>
+    <p>The review tools also allow the user to delete the entire <code>#</code> tag list when it is no longer needed.</p>
+    <p>This removes the list as a saved study set.</p>
+    <a id="export-to-clipboard" class="anchor-target"></a><h5>Export To Clipboard</h5>
+    <p>The list can be exported to the clipboard in a formatted sharing layout.</p>
+    <p>This makes it easy to pass a study list to another user, paste it into notes, or share it in a way that another Biblical Heritage #StudyBible user can import later.</p>
+    <p>An exported list may appear in a format such as:</p>
+    <pre><code>*The following is a formatted sharing list for use in the Biblical Heritage #StudyBible app. Learn more at BiblicalHeritage.net for tutorials, downloads, shared lists, and related links.*
+
+#SoulSleep (1 verses)
+
+Daniel 12:2</code></pre>
+    <figure class="manual-figure">
+  <img src="manual_images/sorted/10-hash-list-review.png" alt="Review A Saved `#` List">
+  <figcaption>Review A Saved <code>#</code> List</figcaption>
+</figure>
+    <p>This formatted clipboard export helps preserve the tag name and verse references in a consistent sharing format.</p>
+    <a id="why-review-mode-matters" class="anchor-target"></a><h4>Why Review Mode Matters</h4>
+<p class="toc-back"><a href="#toc-why-review-mode-matters">Back to TOC</a></p>
+    <p>The review screen is important because it turns a simple collected verse list into a practical study and presentation tool.</p>
+    <p>From one place, the user can:</p>
+    <ul>
+    <li>review the saved references</li>
+    <li>reorder the verses</li>
+    <li>keep the list as the default active tag</li>
+    <li>present the verses in large-text slide form</li>
+    <li>export the list for sharing</li>
+    <li>delete single verses or the whole list</li>
+    </ul>
+    <p>This makes <code>#</code> tags useful not only for collecting verses, but also for organizing and presenting them.</p>
+    <a id="why-tags-matter" class="anchor-target"></a><h4>Why <code>#</code> Tags Matter</h4>
+<p class="toc-back"><a href="#toc-why-tags-matter">Back to TOC</a></p>
+    <p>The <code>#</code> tag system is one of the most important features in the app because it supports a practical Bible-sharing workflow:</p>
+    <ul>
+    <li>collect verses into a clear list</li>
+    <li>organize them by tag and category</li>
+    <li>share or import lists for group use</li>
+    <li>reuse those lists in other study tools</li>
+    <li>grow a simple list into a more structured <code>$</code> study chain when needed</li>
+    </ul>
+    <p>For many users, this is where Bible sharing begins.</p>
+    <a id="tag-summary" class="anchor-target"></a><h4><code>#</code> Tag Summary</h4>
+<p class="toc-back"><a href="#toc-tag-summary">Back to TOC</a></p>
+    <p>Use the <code>#</code> tag screen to gather verses into named lists, organize those lists by category, and share them with others. <code># tags</code> are usually the simplest starting point for topical study and group Bible sharing, and they can later be turned into <code>$</code> study chains when the material needs a more ordered teaching flow.</p>
+    <a id="tags-teaching-and-presentation-chains-2" class="anchor-target"></a><h3><code>$</code> Tags: Teaching And Presentation Chains</h3>
+<p class="toc-back"><a href="#toc-tags-teaching-and-presentation-chains-2">Back to TOC</a></p>
+    <p>The <code>$</code> tag screen works much like the <code>#</code> tag screen, but it is designed for a more structured teaching flow.</p>
+    <p>The main difference is that a <code>$</code> tag can include note content in addition to the saved verses.</p>
+    <p>In simple terms:</p>
+    <ul>
+    <li><code># tags</code> collect verses into a simple list</li>
+    <li><code>$ tags</code> build an ordered study chain that can also include notes</li>
+    </ul>
+    <p>Use <code>$ tags</code> when the goal is not only to collect verses, but to arrange them into a sequence for teaching, preaching, note-taking, and presentation.</p>
+    <a id="how-tags-compare-to-tags" class="anchor-target"></a><h4>How <code>$</code> Tags Compare To <code>#</code> Tags</h4>
+<p class="toc-back"><a href="#toc-how-tags-compare-to-tags">Back to TOC</a></p>
+    <p>The overall workflow is very similar.</p>
+    <p>On the <code>$</code> side, the user can still:</p>
+    <ul>
+    <li>enter a tag name</li>
+    <li>set a default tag</li>
+    <li>save the tag</li>
+    <li>assign a category</li>
+    <li>browse saved tags</li>
+    <li>import a related local tag group</li>
+    </ul>
+    <p>However, the <code>$</code> side adds a content area for notes or slide material.</p>
+    <p>This allows the user to create a guided teaching or presentation sequence rather than only a plain list of verses.</p>
+    <a id="main-controls-on-the-screen" class="anchor-target"></a><h4>Main Controls On The <code>$</code> Screen</h4>
+<p class="toc-back"><a href="#toc-main-controls-on-the-screen">Back to TOC</a></p>
+    <p>The <code>$</code> tag screen includes controls similar to the <code>#</code> side:</p>
+    <ul>
+    <li><code>Instructions</code></li>
+    <li><code>Find Text</code></li>
+    <li><code>Import List</code></li>
+    <li><code>Use</code></li>
+    <li><code>Save</code></li>
+    <li>category controls</li>
+    </ul>
+    <p>It also includes:</p>
+    <ul>
+    <li><code>Add Slide</code>: adds the current verse or slide entry into the <code>$</code> chain</li>
+    <li><code>Tag tools</code>: opens additional tools related to the ordered tag workflow</li>
+    <li><code>Import local #tag group</code>: pulls an existing plain <code>#</code> verse list into a <code>$</code> study chain</li>
+    </ul>
+    <p>This makes it easy to begin with a plain <code>#</code> list and later turn that list into a more formal study or presentation sequence.</p>
+    <a id="content-area" class="anchor-target"></a><h4>Content Area</h4>
+<p class="toc-back"><a href="#toc-content-area">Back to TOC</a></p>
+    <p>The largest difference on the <code>$</code> screen is the <code>Content (optional)</code> area.</p>
+    <p>This note area allows the user to enter additional text that belongs with the saved slide or verse.</p>
+    <p>That content may be used for:</p>
+    <ul>
+    <li>teaching notes</li>
+    <li>commentary</li>
+    <li>transition text between verses</li>
+    <li>presentation notes</li>
+    <li>note-only slide material</li>
+    </ul>
+    <p>The screen also explains that HTML is supported and rendered, and that plain text paste is auto-converted to HTML.</p>
+    <a id="worked-example-import-soulsleep-into-a-tag" class="anchor-target"></a><h4>Worked Example: Import <code>#SoulSleep</code> Into A <code>$</code> Tag</h4>
+<p class="toc-back"><a href="#toc-worked-example-import-soulsleep-into-a-tag">Back to TOC</a></p>
+    <p>One of the most useful <code>$</code> workflows is to begin with a simple <code>#</code> verse list and then import that list into the <code>$</code> side.</p>
+    <p>In this example, the user has already created the <code>#SoulSleep</code> list on the <code>#</code> side.</p>
+    <p>To begin turning that material into a teaching or presentation sequence:</p>
+    <ul class="steps">
+    <li>Open the <code>$</code> tag screen.</li>
+    <li>Create or choose the <code>$</code> tag that will hold the study chain.</li>
+    <li>Select <code>Import local #tag group</code>.</li>
+    <li>In the import dialog, choose the local <code>#SoulSleep</code> group.</li>
+    <li>Select <code>Import</code>.</li>
+    </ul>
+    <p>This pulls the verses from the plain <code>#SoulSleep</code> list into the <code>$</code> workflow.</p>
+    <p>At present, importing the local <code>#</code> group should make the imported <code>$</code> tag the default tag, but this is a known bug and may not happen automatically in the current version.</p>
+    <p>For now, if the imported <code>$</code> tag does not become the default on its own, simply select that tag and use <code>Make default</code> or the equivalent default-tag control to set it manually.</p>
+    <p>At that point, the study is no longer only a simple verse list. It becomes an ordered chain that can be expanded with notes, slide order changes, and presentation use.</p>
+    <figure class="manual-figure">
+  <img src="manual_images/sorted/15-dollar-tag-create.png" alt="Create A `$` Tag">
+  <figcaption>Create A <code>$</code> Tag</figcaption>
+</figure>
+    <figure class="manual-figure">
+  <img src="manual_images/sorted/12-import-local-hash-group.png" alt="Import Local `#` Group">
+  <figcaption>Import Local <code>#</code> Group</figcaption>
+</figure>
+    <a id="step-by-step-turn-a-tag-into-a-teaching-chain" class="anchor-target"></a><h4>Step-By-Step: Turn A <code>#</code> Tag Into A <code>$</code> Teaching Chain</h4>
+<p class="toc-back"><a href="#toc-step-by-step-turn-a-tag-into-a-teaching-chain">Back to TOC</a></p>
+    <p>Use this sequence when you already have a verse list and now want to teach from it.</p>
+    <ul class="steps">
+    <li>First build the verse list on the <code>#</code> side and confirm it is saved.</li>
+    <li>Open the <code>$</code> tag screen.</li>
+    <li>Type a new <code>$</code> tag name or select an existing <code>$</code> tag for the lesson.</li>
+    <li>Tap <code>Use</code> and <code>Save</code> so that <code>$</code> tag becomes the active study chain.</li>
+    <li>Tap <code>Import local #tag group</code>.</li>
+    <li>Select the <code>#</code> tag you want to convert, such as <code>#SoulSleep</code>.</li>
+    <li>Import the group so its verses become slides in the <code>$</code> chain.</li>
+    <li>If needed, set the imported <code>$</code> tag as the default manually.</li>
+    <li>Open the new <code>$</code> chain and begin arranging slide order.</li>
+    <li>Add notes, commentary segments, or transition text in the <code>Content</code> area.</li>
+    <li>Review the chain in presentation mode when the lesson is ready.</li>
+    </ul>
+    <p>Picture guide:</p>
+    <ul>
+    <li>Use <a href="manual_images/sorted/15-dollar-tag-create.png">manual_images/sorted/15-dollar-tag-create.png</a> for the initial <code>$</code> tag setup.</li>
+    <li>Use <a href="manual_images/sorted/12-import-local-hash-group.png">manual_images/sorted/12-import-local-hash-group.png</a> for the import step from <code>#</code> into <code>$</code>.</li>
+    <li>Use <a href="manual_images/sorted/13-dollar-study-chain-empty-notes.png">manual_images/sorted/13-dollar-study-chain-empty-notes.png</a> to see the imported chain before notes are added.</li>
+    <li>Use <a href="manual_images/sorted/14-dollar-study-chain-with-notes.png">manual_images/sorted/14-dollar-study-chain-with-notes.png</a> to see the same chain after study notes have been added.</li>
+    <li>Use <a href="manual_images/sorted/16-presentation-scripture-plus-notes.png">manual_images/sorted/16-presentation-scripture-plus-notes.png</a>, <a href="manual_images/sorted/17-presentation-note-only.png">manual_images/sorted/17-presentation-note-only.png</a>, and <a href="manual_images/sorted/18-presentation-scripture-only.png">manual_images/sorted/18-presentation-scripture-only.png</a> to compare presentation outputs.</li>
+    </ul>
+    <a id="working-inside-a-study-chain" class="anchor-target"></a><h4>Working Inside A <code>$</code> Study Chain</h4>
+<p class="toc-back"><a href="#toc-working-inside-a-study-chain">Back to TOC</a></p>
+    <p>After the import is complete, the user can open the <code>$</code> study chain screen.</p>
+    <p>In the example shown, the chain is <code>$SoulSleep</code>, and the screen title shows:</p>
+    <p><code>$SoulSleep • 1 slides</code></p>
+    <p>This screen is where the user begins working with the ordered study chain itself.</p>
+    <a id="what-this-screen-shows" class="anchor-target"></a><h4>What This Screen Shows</h4>
+<p class="toc-back"><a href="#toc-what-this-screen-shows">Back to TOC</a></p>
+    <p>The <code>$</code> study-chain screen brings together several parts of the lesson or presentation:</p>
+    <ul>
+    <li>the current verse reference</li>
+    <li>the current Scripture text</li>
+    <li>a study-notes area</li>
+    <li>the ordered slide list</li>
+    </ul>
+    <p>This is also the screen where commentary segments or teaching notes can begin to be used alongside the verse chain.</p>
+    <a id="study-notes-and-commentary-segments" class="anchor-target"></a><h4>Study Notes And Commentary Segments</h4>
+<p class="toc-back"><a href="#toc-study-notes-and-commentary-segments">Back to TOC</a></p>
+    <p>The <code>Study Notes</code> area allows the user to place additional material alongside the selected verse.</p>
+    <p>This can be used for commentary segments, teaching notes, explanatory remarks, or transition material between one verse and the next.</p>
+    <p>That is one of the most important differences between a simple <code>#</code> list and a <code>$</code> study chain:</p>
+    <ul>
+    <li>a <code>#</code> list mainly gathers verse references</li>
+    <li>a <code>$</code> chain allows those verses to be supported by notes and commentary segments</li>
+    </ul>
+    <figure class="manual-figure">
+  <img src="manual_images/sorted/13-dollar-study-chain-empty-notes.png" alt="`$` Study Chain">
+  <figcaption><code>$</code> Study Chain</figcaption>
+</figure>
+    <figure class="manual-figure">
+  <img src="manual_images/sorted/14-dollar-study-chain-with-notes.png" alt="`$` Study Chain With Notes">
+  <figcaption><code>$</code> Study Chain With Notes</figcaption>
+</figure>
+    <a id="main-controls-on-the-study-chain-screen" class="anchor-target"></a><h4>Main Controls On The <code>$</code> Study-Chain Screen</h4>
+<p class="toc-back"><a href="#toc-main-controls-on-the-study-chain-screen">Back to TOC</a></p>
+    <p>The screen includes:</p>
+    <ul>
+    <li><code>Slide Order</code>: used to reorder the saved slides</li>
+    <li><code>Make default</code>: sets this <code>$</code> tag as the default active study chain</li>
+    <li>presentation and editing tools in the top row</li>
+    <li><code>Edit Current Link</code>: used to edit the selected slide or current connection in the chain</li>
+    <li><code>Previous</code> and <code>Next</code>: move between slides in the chain</li>
+    <li><code>Slides</code>: shows the saved slide list below</li>
+    </ul>
+    <p>Each slide row can also be managed with controls such as:</p>
+    <ul>
+    <li>move up</li>
+    <li>move down</li>
+    <li>delete</li>
+    </ul>
+    <p>This allows the chain to be shaped into a clear teaching order.</p>
+    <a id="why-this-screen-matters" class="anchor-target"></a><h4>Why This Screen Matters</h4>
+<p class="toc-back"><a href="#toc-why-this-screen-matters">Back to TOC</a></p>
+    <p>This screen is where a verse list begins to become a true lesson or presentation.</p>
+    <p>After importing a plain <code>#</code> group such as <code>#SoulSleep</code>, the user can use this screen to:</p>
+    <ul>
+    <li>preserve the ordered verse chain</li>
+    <li>add commentary or note segments</li>
+    <li>review the current Scripture in context</li>
+    <li>reorder the chain for teaching</li>
+    <li>prepare the material for live presentation or group study</li>
+    </ul>
+    <a id="dynamic-slide-presentation" class="anchor-target"></a><h4>Dynamic Slide Presentation</h4>
+<p class="toc-back"><a href="#toc-dynamic-slide-presentation">Back to TOC</a></p>
+    <p>The slide presentation for a <code>$</code> study chain is dynamic. It adapts to the combination of Scripture text and note content saved in the chain.</p>
+    <p>Depending on what has been added to the current slide, the presentation may show:</p>
+    <ul>
+    <li>Scripture text by itself</li>
+    <li>Scripture text together with commentary or study notes</li>
+    <li>a note-only slide without any Bible text attached</li>
+    </ul>
+    <p>This makes the <code>$</code> system flexible for teaching and group presentation.</p>
+    <p>For example:</p>
+    <ul>
+    <li>one slide may show <code>Daniel 12:2</code> on the left with commentary text on the right</li>
+    <li>another slide may show only a note or transition statement</li>
+    <li>another slide may return to a full Scripture-only presentation such as <code>John 11:14</code></li>
+    </ul>
+    <p>This allows the speaker or teacher to move naturally between Bible text, explanatory commentary, and note-only transition slides without leaving the study chain.</p>
+    <figure class="manual-figure">
+  <img src="manual_images/sorted/16-presentation-scripture-plus-notes.png" alt="Presentation: Scripture And Notes">
+  <figcaption>Presentation: Scripture And Notes</figcaption>
+</figure>
+    <figure class="manual-figure">
+  <img src="manual_images/sorted/17-presentation-note-only.png" alt="Presentation: Note Only">
+  <figcaption>Presentation: Note Only</figcaption>
+</figure>
+    <figure class="manual-figure">
+  <img src="manual_images/sorted/18-presentation-scripture-only.png" alt="Presentation: Scripture Only">
+  <figcaption>Presentation: Scripture Only</figcaption>
+</figure>
+    <a id="why-dynamic-presentation-helps" class="anchor-target"></a><h4>Why Dynamic Presentation Helps</h4>
+<p class="toc-back"><a href="#toc-why-dynamic-presentation-helps">Back to TOC</a></p>
+    <p>This dynamic behavior is especially valuable for overhead screens, projectors, video recording, or live teaching.</p>
+    <p>It allows the same <code>$</code> chain to function as:</p>
+    <ul>
+    <li>a Scripture presentation</li>
+    <li>a teaching outline</li>
+    <li>a commentary-supported lesson</li>
+    <li>a sequence with transition slides between key verses</li>
+    </ul>
+    <p>In other words, the slide presentation adapts to the lesson material instead of forcing every slide to use the same structure.</p>
+    <a id="export-and-sharing-for-tags" class="anchor-target"></a><h4>Export And Sharing For <code>$</code> Tags</h4>
+<p class="toc-back"><a href="#toc-export-and-sharing-for-tags">Back to TOC</a></p>
+    <p>The export function also works on the <code>$</code> side.</p>
+    <p>This means a completed <code>$</code> study chain can be copied to the clipboard and shared in a formatted text layout that preserves the ordered slide sequence and any notes attached to those slides.</p>
+    <p>This is important because it allows one user to prepare a full study chain, including commentary segments and note-only slides, and then share that chain with another user.</p>
+    <p>An exported <code>$</code> chain may appear in a format such as:</p>
+    <pre><code>*The following is a formatted sharing list for use in the Biblical Heritage $StudyBible app. Learn more at BiblicalHeritage.net for tutorials, downloads, shared lists, and related links.*
+
+$SoulSleep (3 slides)
+
+Daniel 12:2
+Notes:
+3 ( Psalm 8:3 ; 147:4 ; Daniel 12:3 ). Each to Give His Measure of Light —Every shining star which God has placed in the heavens obeys His mandate, and gives its distinctive measure of light to make beautiful the heavens at night; so let every converted soul show the measure of light committed to him; and as it shines forth the light will increase and grow brighter. Give out your light, ... pour forth your beams mirrored from heaven. O daughter of Zion, “Arise, shine; for thy light is come, and the glory of the Lord is risen upon thee” ( Letter 38, 1890 ).
+
+Note Slide 2
+Notes:
+This is a note only slide where you can but just a note by itself without any text associated with it.
+
+John 11:14</code></pre>
+    <p>This export format shows the difference between the two tag types clearly:</p>
+    <ul>
+    <li>a <code>#</code> export shares a simple verse list</li>
+    <li>a <code>$</code> export shares an ordered slide chain that may also include notes</li>
+    </ul>
+    <p>That makes <code>$</code> exports especially useful for teaching teams, group-study leaders, and anyone who wants to pass along a prepared presentation sequence rather than only a list of references.</p>
+    <a id="finding-saved-lists" class="anchor-target"></a><h4>Finding Saved Lists</h4>
+<p class="toc-back"><a href="#toc-finding-saved-lists">Back to TOC</a></p>
+    <p>Saved <code>#</code> and <code>$</code> lists can be found in several ways depending on how the user prefers to work.</p>
+    <p>Common methods include:</p>
+    <ul>
+    <li>browsing the visible saved-list area</li>
+    <li>narrowing by category</li>
+    <li>searching by tag name</li>
+    <li>sorting the list into a clearer order</li>
+    </ul>
+    <p>This is helpful when the user has built many topics over time and wants to reopen one quickly for editing, presentation, or sharing.</p>
+    <a id="why-tags-matter-2" class="anchor-target"></a><h4>Why <code>$</code> Tags Matter</h4>
+<p class="toc-back"><a href="#toc-why-tags-matter-2">Back to TOC</a></p>
+    <p><code>$</code> tags are especially useful when a study grows beyond a simple verse list and needs order, commentary, or presentation flow.</p>
+    <p>They are well suited for:</p>
+    <ul>
+    <li>sermons</li>
+    <li>classes</li>
+    <li>group Bible studies</li>
+    <li>guided topic presentations</li>
+    <li>overhead-screen or projector use</li>
+    </ul>
+    <p>A user might begin with a <code>#</code> list for collecting verses, then convert or rebuild that material as a <code>$</code> tag when notes and presentation order become important.</p>
+    <a id="tag-summary-2" class="anchor-target"></a><h4><code>$</code> Tag Summary</h4>
+<p class="toc-back"><a href="#toc-tag-summary-2">Back to TOC</a></p>
+    <p>Use <code>$</code> tags when a saved verse collection needs order, notes, and presentation flow. A common pattern is to gather material first with <code># tags</code>, move into <code>$</code> tags when the study becomes a lesson or sermon, and use <code>Bible Memory</code> when the goal is recall and repeated review rather than presentation.</p>
+    <p>The <code>$</code> tag system works much like the <code>#</code> tag system, but with the added ability to include note content. Use <code>#</code> tags for simple verse lists, and use <code>$</code> tags when the same study needs ordered slides, notes, or presentation flow.</p>
+    <a id="bible-explorer-bottom-bar" class="anchor-target"></a><h2>Bible Explorer Bottom Bar</h2>
+<p class="toc-back"><a href="#toc-bible-explorer-bottom-bar">Back to TOC</a></p>
+    <p>The bottom bar contains quick tools for moving through the reading and study experience.</p>
+    <p>These controls include history, text-size adjustment, commentary access, and additional reading or study tools.</p>
+    <a id="history" class="anchor-target"></a><h3>History</h3>
+<p class="toc-back"><a href="#toc-history">Back to TOC</a></p>
+    <p>The <code>History</code> button opens a list of recently visited passages.</p>
+    <p>When selected, it shows the recent references the user has opened in Bible Explorer, along with the time each one was visited.</p>
+    <p>This makes it easy to:</p>
+    <ul>
+    <li>return to a passage that was opened earlier</li>
+    <li>move back to a verse that was part of the current study session</li>
+    <li>revisit a recently viewed reference without searching for it again</li>
+    </ul>
+    <p>Selecting an item from the history list takes the user back to that passage.</p>
+    <p>Even though the History button is fairly self-explanatory, it becomes especially useful during longer study sessions when the user has moved through many references and wants to return quickly to one that was just viewed.</p>
+    <a id="text-size-a-and-a" class="anchor-target"></a><h3>Text Size: <code>A-</code> and <code>A+</code></h3>
+<p class="toc-back"><a href="#toc-text-size-a-and-a">Back to TOC</a></p>
+    <p>The <code>A-</code> and <code>A+</code> controls change the reading size of the Bible text.</p>
+    <p>These buttons are used when the reader wants the text to appear smaller or larger on the screen.</p>
+    <ul>
+    <li><code>A-</code>: reduces the text size</li>
+    <li><code>A+</code>: increases the text size</li>
+    </ul>
+    <p>This makes Bible Explorer easier to adapt for:</p>
+    <ul>
+    <li>personal reading comfort</li>
+    <li>larger desktop displays</li>
+    <li>smaller screens</li>
+    <li>teaching situations where the text needs to be easier to see from a distance</li>
+    </ul>
+    <p>When the user selects one of these controls, the current passage remains in view, but the text is redrawn at the new size.</p>
+    <p>This allows the user to keep reading the same section of Scripture while adjusting the display for comfort or visibility.</p>
+    <a id="commentary-button" class="anchor-target"></a><h3>Commentary Button</h3>
+<p class="toc-back"><a href="#toc-commentary-button">Back to TOC</a></p>
+    <p>The center button on the bottom bar opens the commentary and research panel for the current passage.</p>
+    <p>This is the main place where the user can see related commentary material connected with the verse or chapter currently being read.</p>
+    <p>For example, when the reader is at <code>Matthew 3:1</code>, the panel may open as <code>Commentary: Matthew 3</code>.</p>
+    <a id="commentary-and-research-tabs" class="anchor-target"></a><h3>Commentary And Research Tabs</h3>
+<p class="toc-back"><a href="#toc-commentary-and-research-tabs">Back to TOC</a></p>
+    <p>The commentary panel has two related views:</p>
+    <ul>
+    <li><code>Commentary</code></li>
+    <li><code>Research</code></li>
+    </ul>
+    <p>These two views help keep recognized commentary material separate from other imported reading material.</p>
+    <a id="commentary" class="anchor-target"></a><h4>Commentary</h4>
+<p class="toc-back"><a href="#toc-commentary">Back to TOC</a></p>
+    <p>The <code>Commentary</code> side shows commentary entries that belong to the managed commentary library.</p>
+    <p>In the example shown, the app displays:</p>
+    <ul>
+    <li><code>SDA Bible Commentary, vol. 5 (EGW)</code></li>
+    <li>live EPUB commentary entries from <code>5BC</code></li>
+    </ul>
+    <p>These entries are treated as commentary matches for the current passage.</p>
+    <p>This is the most direct commentary view, because it shows commentary material that the app recognizes as belonging in the commentary library.</p>
+    <a id="research" class="anchor-target"></a><h4>Research</h4>
+<p class="toc-back"><a href="#toc-research">Back to TOC</a></p>
+    <p>The <code>Research</code> side shows related hits from other imported EPUB or PDF files stored in the research library.</p>
+    <p>These are not necessarily formal commentary volumes, but they may still contain material related to the current passage.</p>
+    <p>For example, after the user imports additional EPUB files into the research library, the app may show related results such as:</p>
+    <ul>
+    <li><code>Christ's Object Lessons</code></li>
+    <li><code>Testimonies for the Church, vol. 7</code></li>
+    <li><code>Testimonies for the Church, vol. 8</code></li>
+    </ul>
+    <p>This means that once other EPUB or PDF books have been imported, the app can surface additional related reading that may help explain or expand the current passage.</p>
+    <figure class="manual-figure">
+  <img src="manual_images/sorted/19-commentary-pane.png" alt="Commentary Pane">
+  <figcaption>Commentary Pane</figcaption>
+</figure>
+    <figure class="manual-figure">
+  <img src="manual_images/sorted/20-research-pane.png" alt="Research Pane">
+  <figcaption>Research Pane</figcaption>
+</figure>
+    <a id="why-both-views-matter" class="anchor-target"></a><h3>Why Both Views Matter</h3>
+<p class="toc-back"><a href="#toc-why-both-views-matter">Back to TOC</a></p>
+    <p>This two-part design is important because not every useful book belongs in the formal commentary library.</p>
+    <p>The app keeps the two kinds of material separate:</p>
+    <ul>
+    <li>recognized BC commentary files stay in the <code>Commentary</code> library</li>
+    <li>other imported EPUB/PDF books are routed into the <code>Research</code> library</li>
+    </ul>
+    <p>But when a passage is being studied, both types of material may still be helpful.</p>
+    <p>So the commentary button becomes a bridge:</p>
+    <ul>
+    <li>it shows direct commentary when commentary exists</li>
+    <li>it also reveals other imported books that may relate to the same Scripture</li>
+    </ul>
+    <a id="research-library-connection" class="anchor-target"></a><h3>Research Library Connection</h3>
+<p class="toc-back"><a href="#toc-research-library-connection">Back to TOC</a></p>
+    <p>This behavior depends on the files the user has already imported through <code>Commentary Library Setup</code>.</p>
+    <p>If the user adds other EPUB or PDF files to the research library, those files may begin to appear on the <code>Research</code> side when the current passage has matching material.</p>
+    <p>This allows the user to move beyond one formal commentary source and compare the passage with other imported books that may also shed light on the same verses.</p>
+    <figure class="manual-figure">
+  <img src="manual_images/sorted/21-commentary-library-research.png" alt="Commentary Library And Research Library">
+  <figcaption>Commentary Library And Research Library</figcaption>
+</figure>
+    <a id="commentary-button-summary" class="anchor-target"></a><h3>Commentary Button Summary</h3>
+<p class="toc-back"><a href="#toc-commentary-button-summary">Back to TOC</a></p>
+    <p>Use the commentary button to open passage-related reference material. The <code>Commentary</code> tab shows recognized commentary entries, while the <code>Research</code> tab can show related material from other imported EPUB or PDF books. Together, these views help the user study the passage from both commentary and broader research sources.</p>
+    <a id="mode-and-theme-menu" class="anchor-target"></a><h3>Mode And Theme Menu</h3>
+<p class="toc-back"><a href="#toc-mode-and-theme-menu">Back to TOC</a></p>
+    <p>The bottom-right control opens a menu for additional reading and study options.</p>
+    <p>In the screenshots shown, this menu includes:</p>
+    <ul>
+    <li><code>Bible Memory</code></li>
+    <li><code>Interlinear Mode</code></li>
+    <li><code>Theme</code></li>
+    </ul>
+    <p>This menu gathers together one memory tool, one original-language study tool, and the theme selector for the reading screen.</p>
+    <figure class="manual-figure">
+  <img src="manual_images/sorted/40-theme-menu.png" alt="Mode And Theme Menu">
+  <figcaption>Mode And Theme Menu</figcaption>
+</figure>
+    <a id="theme-selector" class="anchor-target"></a><h3>Theme Selector</h3>
+<p class="toc-back"><a href="#toc-theme-selector">Back to TOC</a></p>
+    <p>The bottom choice in this menu is the theme selector.</p>
+    <p>This works much like the theme selection described earlier in the app. It allows the user to change the current reading appearance without leaving Bible Explorer.</p>
+    <p>For example, the user may switch to a theme such as <code>Sepia</code> or <code>Night</code>, depending on the themes available in the current app version.</p>
+    <p>This gives the reader another quick way to adjust the look of the Bible text while staying in the main reading view.</p>
+    <a id="interlinear-mode" class="anchor-target"></a><h3>Interlinear Mode</h3>
+<p class="toc-back"><a href="#toc-interlinear-mode">Back to TOC</a></p>
+    <p>The middle choice in the menu is <code>Interlinear Mode</code>.</p>
+    <p>This opens the ancient-language display options for the current passage.</p>
+    <p>When interlinear mode is enabled, the passage is shown with stacked original-language study information rather than only the normal English reading view.</p>
+    <p>Depending on the selected options, the stacked display may include:</p>
+    <ul>
+    <li>the English gloss</li>
+    <li>the ancient text</li>
+    <li>transliteration</li>
+    <li>pronunciation</li>
+    <li>Strong's number</li>
+    <li>morphology</li>
+    </ul>
+    <p>In the example shown, the visible stacks display the transliteration, pronunciation, and Strong's number along with the original-language text.</p>
+    <a id="interlinear-options" class="anchor-target"></a><h3>Interlinear Options</h3>
+<p class="toc-back"><a href="#toc-interlinear-options">Back to TOC</a></p>
+    <p>The interlinear options screen allows the user to choose how the original-language material is shown.</p>
+    <p>The menu shown in the screenshots includes:</p>
+    <ul>
+    <li><code>Language Source</code>: <code>Bible Tokens (Original Language)</code></li>
+    <li><code>Word Order</code>: <code>Original Language Order</code> or <code>English (KJV) Order</code></li>
+    <li><code>English Gloss</code></li>
+    <li><code>Ancient Text</code></li>
+    <li><code>Transliteration</code></li>
+    <li><code>Pronunciation</code></li>
+    <li><code>Strong's Number</code></li>
+    <li><code>Morphology</code></li>
+    </ul>
+    <p>This lets the user simplify the display or make it more detailed depending on the type of study being done.</p>
+    <figure class="manual-figure">
+  <img src="manual_images/sorted/22-interlinear-settings.png" alt="Interlinear Settings">
+  <figcaption>Interlinear Settings</figcaption>
+</figure>
+    <figure class="manual-figure">
+  <img src="manual_images/sorted/23-interlinear-active.png" alt="Active Interlinear View">
+  <figcaption>Active Interlinear View</figcaption>
+</figure>
+    <a id="opening-the-dictionary" class="anchor-target"></a><h3>Opening The Dictionary</h3>
+<p class="toc-back"><a href="#toc-opening-the-dictionary">Back to TOC</a></p>
+    <p>When interlinear mode is active, tapping a Strong's number or tapping the related word opens the dictionary entry for that word.</p>
+    <p>This dictionary view shows information such as:</p>
+    <ul>
+    <li>the Strong's number</li>
+    <li>the original-language form</li>
+    <li>transliteration</li>
+    <li>pronunciation</li>
+    <li>brief lexical definition</li>
+    <li>related references</li>
+    </ul>
+    <p>This makes the interlinear display interactive rather than only visual.</p>
+    <figure class="manual-figure">
+  <img src="manual_images/sorted/24-strongs-dictionary.png" alt="Strong's Dictionary">
+  <figcaption>Strong's Dictionary</figcaption>
+</figure>
+    <a id="related-verse-list" class="anchor-target"></a><h3>Related Verse List</h3>
+<p class="toc-back"><a href="#toc-related-verse-list">Back to TOC</a></p>
+    <p>The dictionary entry also includes a selector or results area showing other places where the same Strong's entry appears.</p>
+    <p>When the user taps that list selector, the app reveals additional verse locations connected with that word.</p>
+    <p>Tapping one of those listed locations navigates directly to that verse.</p>
+    <p>This allows the user to move from one word study into a broader Scripture comparison by following where the same original-language word appears elsewhere.</p>
+    <figure class="manual-figure">
+  <img src="manual_images/sorted/25-strongs-related-verses.png" alt="Strong's Related Verses">
+  <figcaption>Strong's Related Verses</figcaption>
+</figure>
+    <a id="why-interlinear-mode-matters" class="anchor-target"></a><h3>Why Interlinear Mode Matters</h3>
+<p class="toc-back"><a href="#toc-why-interlinear-mode-matters">Back to TOC</a></p>
+    <p>Interlinear mode is especially valuable for users who want to study the ancient text more closely.</p>
+    <p>It helps the reader:</p>
+    <ul>
+    <li>compare English wording with the original-language text</li>
+    <li>see transliteration and pronunciation</li>
+    <li>follow Strong's-number links into dictionary entries</li>
+    <li>navigate to other verses that use the same word</li>
+    </ul>
+    <p>This makes the bottom-right menu one of the most important study-tool entry points in Bible Explorer.</p>
+    <a id="bible-memory" class="anchor-target"></a><h3>Bible Memory</h3>
+<p class="toc-back"><a href="#toc-bible-memory">Back to TOC</a></p>
+    <p>The top choice in the bottom-right menu is <code>Bible Memory</code>.</p>
+    <p>Bible Memory is designed to help the user hide Scripture in the heart through gradual recall and repeated review.</p>
+    <p>It works especially well with verse groups that have already been collected through <code>#</code> tags.</p>
+    <a id="bible-memory-main-screen" class="anchor-target"></a><h3>Bible Memory Main Screen</h3>
+<p class="toc-back"><a href="#toc-bible-memory-main-screen">Back to TOC</a></p>
+    <p>The Bible Memory screen shows the current review group, the review queue, and the memory tools for that group.</p>
+    <p>In the example shown, the selected group is <code>#SoulSleep</code>.</p>
+    <p>The main controls include:</p>
+    <ul>
+    <li><code>Memory Instructions</code></li>
+    <li><code>Add Verse</code></li>
+    <li><code>Add Range</code></li>
+    <li><code>Import #Tag Group</code></li>
+    <li><code>Import External</code></li>
+    <li><code>Export Group</code></li>
+    <li><code>Start Due Review</code></li>
+    </ul>
+    <figure class="manual-figure">
+  <img src="manual_images/sorted/26-bible-memory-queue-due.png" alt="Bible Memory Queue">
+  <figcaption>Bible Memory Queue</figcaption>
+</figure>
+    <a id="step-by-step-import-a-tag-into-bible-memory" class="anchor-target"></a><h3>Step-By-Step: Import A <code>#</code> Tag Into Bible Memory</h3>
+<p class="toc-back"><a href="#toc-step-by-step-import-a-tag-into-bible-memory">Back to TOC</a></p>
+    <p>Use this sequence when you already have a saved <code>#</code> verse list and want to begin memorizing it.</p>
+    <ul class="steps">
+    <li>First create or review the <code>#</code> tag you want to memorize, such as <code>#SoulSleep</code>.</li>
+    <li>In Bible Explorer, open the bottom-right menu and choose <code>Bible Memory</code>.</li>
+    <li>On the Bible Memory screen, tap <code>Import #Tag Group</code>.</li>
+    <li>Select the saved <code>#</code> tag group you want to bring in.</li>
+    <li>Confirm the import so the verses appear in the Bible Memory queue.</li>
+    <li>Review the queue and confirm the imported group is now the active memory set.</li>
+    <li>Tap <code>Start Due Review</code> to begin practicing the verses that are ready.</li>
+    </ul>
+    <p>Picture guide:</p>
+    <ul>
+    <li>Use <a href="manual_images/sorted/26-bible-memory-queue-due.png">manual_images/sorted/26-bible-memory-queue-due.png</a> to identify the queue screen and the <code>Import #Tag Group</code> button.</li>
+    <li>Use <a href="manual_images/sorted/27-bible-memory-stage1.png">manual_images/sorted/27-bible-memory-stage1.png</a> to see the first review stage after the import.</li>
+    <li>Use <a href="manual_images/sorted/28-bible-memory-stage2-start.png">manual_images/sorted/28-bible-memory-stage2-start.png</a> to see the next level of hidden-word practice.</li>
+    <li>Use <a href="manual_images/sorted/32-bible-memory-stage6-no-hints.png">manual_images/sorted/32-bible-memory-stage6-no-hints.png</a> to see the later no-hints stage.</li>
+    </ul>
+    <a id="what-the-main-buttons-do" class="anchor-target"></a><h3>What The Main Buttons Do</h3>
+<p class="toc-back"><a href="#toc-what-the-main-buttons-do">Back to TOC</a></p>
+    <p>The app's own instructions describe these controls this way:</p>
+    <ul>
+    <li><code>Add Verse</code>: add one verse at a time</li>
+    <li><code>Add Range</code>: add a full passage when you want to memorize several verses together</li>
+    <li><code>Import #Tag Group</code>: bring in an existing <code>#tag</code> list as a memory group</li>
+    <li><code>Import External</code>: paste a formatted list from outside the app</li>
+    <li><code>Export Group</code>: copy the current memory list into a shareable text format</li>
+    <li><code>Start Due Review</code>: open the verses that are scheduled for review right now</li>
+    </ul>
+    <p>This makes Bible Memory easy to connect with the rest of the app, especially with verse lists that were first built as <code>#</code> tags.</p>
+    <a id="how-bible-memory-works" class="anchor-target"></a><h3>How Bible Memory Works</h3>
+<p class="toc-back"><a href="#toc-how-bible-memory-works">Back to TOC</a></p>
+    <p>Bible Memory uses a gradual drill process rather than asking the user to type the entire verse at once.</p>
+    <p>The process works like this:</p>
+    <ul class="steps">
+    <li>Add a verse or passage to memorize.</li>
+    <li>Open that verse for practice.</li>
+    <li>The drill begins by showing the full verse so it can be read carefully.</li>
+    <li>Then words begin disappearing.</li>
+    <li>The user types the first letter of each missing word.</li>
+    <li>If the missing words are supplied correctly, the verse is learned more deeply and scheduled to return later.</li>
+    <li>The verse repeats at growing intervals so it stays active in memory instead of fading away.</li>
+    </ul>
+    <a id="step-by-step-run-a-bible-memory-review" class="anchor-target"></a><h3>Step-By-Step: Run A Bible Memory Review</h3>
+<p class="toc-back"><a href="#toc-step-by-step-run-a-bible-memory-review">Back to TOC</a></p>
+    <p>Use this sequence after verses are already in the Bible Memory queue.</p>
+    <ul class="steps">
+    <li>Open <code>Bible Memory</code>.</li>
+    <li>Tap <code>Start Due Review</code>.</li>
+    <li>Read the full verse carefully in the opening stage.</li>
+    <li>Continue to the next prompt when the app begins hiding words.</li>
+    <li>Type the first letter of each missing word as the prompt requests.</li>
+    <li>Keep going until the review session completes or the app advances the verse cadence.</li>
+    <li>Return later when the verse appears again in the due queue.</li>
+    </ul>
+    <p>Picture guide:</p>
+    <ul>
+    <li>Use <a href="manual_images/sorted/27-bible-memory-stage1.png">manual_images/sorted/27-bible-memory-stage1.png</a> for the full-verse opening stage.</li>
+    <li>Use <a href="manual_images/sorted/28-bible-memory-stage2-start.png">manual_images/sorted/28-bible-memory-stage2-start.png</a> for the hidden-word prompt stage.</li>
+    <li>Use <a href="manual_images/sorted/32-bible-memory-stage6-no-hints.png">manual_images/sorted/32-bible-memory-stage6-no-hints.png</a> for the advanced stage where the text is fully hidden.</li>
+    </ul>
+    <a id="review-stages" class="anchor-target"></a><h3>Review Stages</h3>
+<p class="toc-back"><a href="#toc-review-stages">Back to TOC</a></p>
+    <p>The screenshots show the verse moving through a sequence of memory stages.</p>
+    <p>These stages include:</p>
+    <ul>
+    <li><code>Stage 1: Full Verse</code></li>
+    <li><code>Stage 2: Guess Every 5th Word</code></li>
+    <li>later stages that hide words more often</li>
+    <li><code>Stage 6: Hide All Words (No Visual Hints)</code></li>
+    </ul>
+    <p>As the stages advance, more of the text is hidden and the user must supply more of the verse from memory.</p>
+    <a id="what-the-user-sees-during-review" class="anchor-target"></a><h3>What The User Sees During Review</h3>
+<p class="toc-back"><a href="#toc-what-the-user-sees-during-review">Back to TOC</a></p>
+    <p>During review, the verse remains visible on the screen, but selected words are hidden according to the current stage.</p>
+    <p>The user is prompted to type the first letter of the next hidden word.</p>
+    <p>As correct answers are supplied:</p>
+    <ul>
+    <li>the hidden words are revealed</li>
+    <li>the drill advances through more difficult stages</li>
+    <li>the verse moves toward longer review intervals</li>
+    </ul>
+    <p>The review screen also shows:</p>
+    <ul>
+    <li>misses this session</li>
+    <li>total strikes</li>
+    <li>the limit needed to advance cadence</li>
+    </ul>
+    <p>This helps the user see how well the current review is going.</p>
+    <figure class="manual-figure">
+  <img src="manual_images/sorted/27-bible-memory-stage1.png" alt="Bible Memory Stage 1">
+  <figcaption>Bible Memory Stage 1</figcaption>
+</figure>
+    <figure class="manual-figure">
+  <img src="manual_images/sorted/28-bible-memory-stage2-start.png" alt="Bible Memory Stage 2">
+  <figcaption>Bible Memory Stage 2</figcaption>
+</figure>
+    <figure class="manual-figure">
+  <img src="manual_images/sorted/32-bible-memory-stage6-no-hints.png" alt="Bible Memory Stage 6">
+  <figcaption>Bible Memory Stage 6</figcaption>
+</figure>
+    <a id="why-bible-memory-fits-with-tags" class="anchor-target"></a><h3>Why Bible Memory Fits With <code>#</code> Tags</h3>
+<p class="toc-back"><a href="#toc-why-bible-memory-fits-with-tags">Back to TOC</a></p>
+    <p>Bible Memory works especially well with saved <code>#</code> lists.</p>
+    <p>A strong workflow is:</p>
+    <ul class="steps">
+    <li>build a <code>#tag</code> study list first</li>
+    <li>import that <code>#tag</code> group into Bible Memory</li>
+    <li>practice the verses by repeated review</li>
+    </ul>
+    <p>This allows a topic such as <code>#SoulSleep</code> to move from study and sharing into long-term memorization.</p>
+    <a id="bible-memory-summary" class="anchor-target"></a><h3>Bible Memory Summary</h3>
+<p class="toc-back"><a href="#toc-bible-memory-summary">Back to TOC</a></p>
+    <p>Use Bible Memory to turn saved verses or <code>#tag</code> groups into a spaced-review memory plan. The app begins with the full verse, gradually hides more words, and helps the user strengthen recall by supplying the missing words step by step over repeated review sessions.</p>
+    <a id="closing-note" class="anchor-target"></a><h2>Closing Note</h2>
+<p class="toc-back"><a href="#toc-closing-note">Back to TOC</a></p>
+    <p>Biblical Heritage #StudyBible is intended to grow with real study use.</p>
+    <p>If there is a feature you would like to see added, improved, or simplified, you are encouraged to request it.</p>
+    <p>User feedback helps guide future updates, refine study workflows, and identify areas where the app can better support personal study, teaching, group Bible reading, commentary use, and Scripture memory.</p>
+  
+    <section class="feedback-panel" aria-labelledby="manual-feedback">
+      <h2 id="manual-feedback">Need More Information?</h2>
+      <p>If a step is unclear, if a screenshot is missing, or if you need a fuller walkthrough, use the feedback option below and tell us which manual section needs more detail.</p>
+      <p><a class="site-btn" href="mailto:OurBiblicalHeritage@gmail.com?subject=%23StudyBible%20Manual%20Feedback&body=Please%20tell%20us%20which%20manual%20section%20needs%20more%20detail.">Send Manual Feedback</a></p>
+    </section>
+
+  </main>
+</body>
+</html>
