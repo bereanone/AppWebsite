@@ -13,6 +13,7 @@ export default defineConfig({
         brhc: resolve(__dirname, 'brhc.html'),
         studybible: resolve(__dirname, 'studybible.html'),
         downloads: resolve(__dirname, 'downloads.html'),
+        usermanual: resolve(__dirname, 'usermanual.html'),
       },
     },
   },
